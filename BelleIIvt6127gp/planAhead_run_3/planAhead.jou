@@ -1,0 +1,10 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7
+# Build 321239 by xbuild on Fri Sep 27 19:31:35 MDT 2013
+# Start of session at: Mon Nov 19 23:14:38 2018
+# Process ID: 468
+# Log file: C:/Users/B1409_Server/Desktop/BelleII_Xilinx/BelleIIvt6127gp/planAhead_run_3/planAhead.log
+# Journal file: C:/Users/B1409_Server/Desktop/BelleII_Xilinx/BelleIIvt6127gp/planAhead_run_3/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source C:/Users/B1409_Server/Desktop/BelleII_Xilinx/BelleIIvt6127gp/pa.fromNetlist.tcl
