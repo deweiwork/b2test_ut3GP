@@ -10,7 +10,7 @@ Target Device  : xc6vhx380t
 Target Package : ff1923
 Target Speed   : -2
 Mapper Version : virtex6 -- $Revision: 1.55 $
-Mapped Date    : Mon Nov 19 23:23:47 2018
+Mapped Date    : Sat Dec 08 15:10:24 2018
 
 Mapping design into LUTs...
 Running directed packing...
@@ -23,19 +23,19 @@ Total REAL time at the beginning of Placer: 35 secs
 Total CPU  time at the beginning of Placer: 35 secs 
 
 Phase 1.1  Initial Placement Analysis
-Phase 1.1  Initial Placement Analysis (Checksum:79b51bc2) REAL time: 56 secs 
+Phase 1.1  Initial Placement Analysis (Checksum:79b51bc2) REAL time: 57 secs 
 
 Phase 2.7  Design Feasibility Check
 INFO:Place:834 - Only a subset of IOs are locked. Out of 148 IOs, 3 are locked
    and 145 are not locked. If you would like to print the names of these IOs,
    please set the environment variable XIL_PAR_DESIGN_CHECK_VERBOSE to 1. 
-Phase 2.7  Design Feasibility Check (Checksum:79b51bc2) REAL time: 57 secs 
+Phase 2.7  Design Feasibility Check (Checksum:79b51bc2) REAL time: 58 secs 
 
 Phase 3.31  Local Placement Optimization
-Phase 3.31  Local Placement Optimization (Checksum:dea777e) REAL time: 57 secs 
+Phase 3.31  Local Placement Optimization (Checksum:dea777e) REAL time: 58 secs 
 
 Phase 4.37  Local Placement Optimization
-Phase 4.37  Local Placement Optimization (Checksum:dea777e) REAL time: 57 secs 
+Phase 4.37  Local Placement Optimization (Checksum:dea777e) REAL time: 58 secs 
 
 Phase 5.2  Initial Placement for Architecture Specific Features
 .......
@@ -60,21 +60,21 @@ Phase 10.8  Global Placement
 ........................................................................
 ..............................
 ........................
-Phase 10.8  Global Placement (Checksum:4d841e2b) REAL time: 1 mins 8 secs 
+Phase 10.8  Global Placement (Checksum:4d841e2b) REAL time: 1 mins 9 secs 
 
 Phase 11.5  Local Placement Optimization
-Phase 11.5  Local Placement Optimization (Checksum:4d841e2b) REAL time: 1 mins 8 secs 
+Phase 11.5  Local Placement Optimization (Checksum:4d841e2b) REAL time: 1 mins 9 secs 
 
 Phase 12.18  Placement Optimization
-Phase 12.18  Placement Optimization (Checksum:717686c1) REAL time: 1 mins 13 secs 
+Phase 12.18  Placement Optimization (Checksum:717686c1) REAL time: 1 mins 14 secs 
 
 Phase 13.5  Local Placement Optimization
-Phase 13.5  Local Placement Optimization (Checksum:717686c1) REAL time: 1 mins 13 secs 
+Phase 13.5  Local Placement Optimization (Checksum:717686c1) REAL time: 1 mins 14 secs 
 
 Phase 14.34  Placement Validation
 Phase 14.34  Placement Validation (Checksum:38664825) REAL time: 1 mins 14 secs 
 
-Total REAL time to Placer completion: 1 mins 14 secs 
+Total REAL time to Placer completion: 1 mins 15 secs 
 Total CPU  time to Placer completion: 1 mins 14 secs 
 Running post-placement packing...
 Writing output files...
@@ -178,9 +178,9 @@ Specific Feature Utilization:
   Number of RPM macros:           18
 Average Fanout of Non-Clock Nets:                2.79
 
-Peak Memory Usage:  5144 MB
-Total REAL time to MAP completion:  1 mins 15 secs 
-Total CPU time to MAP completion:   1 mins 15 secs 
+Peak Memory Usage:  5140 MB
+Total REAL time to MAP completion:  1 mins 16 secs 
+Total CPU time to MAP completion:   1 mins 16 secs 
 
 Mapping completed.
 See MAP report file "XCVR_TOP_map.mrp" for details.

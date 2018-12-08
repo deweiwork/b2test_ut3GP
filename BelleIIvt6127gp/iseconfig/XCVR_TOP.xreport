@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2018-11-27T09:03:22</DateModified>
+  <DateModified>2018-12-08T15:09:52</DateModified>
   <ModuleName>XCVR_TOP</ModuleName>
-  <SummaryTimeStamp>2018-11-19T23:08:00</SummaryTimeStamp>
-  <SavedFilePath>C:/Users/B1409_Server/Desktop/BelleII_Xilinx/BelleIIvt6127gp/iseconfig/XCVR_TOP.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>C:/Users/B1409_Server/Desktop/BelleII_Xilinx/BelleIIvt6127gp\</ImplementationReportsDirectory>
+  <SummaryTimeStamp>2018-12-08T15:09:46</SummaryTimeStamp>
+  <SavedFilePath>C:/Users/B1409_Server/Desktop/ut3GP/BelleIIvt6127gp/iseconfig/XCVR_TOP.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>C:/Users/B1409_Server/Desktop/ut3GP/BelleIIvt6127gp\</ImplementationReportsDirectory>
   <DateInitialized>2018-11-19T21:43:45</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>
