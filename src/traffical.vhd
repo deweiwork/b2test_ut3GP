@@ -15,7 +15,7 @@ generic (
     constant flag_of_k_ctrl_swap : std_logic_vector((ctrl_code_length_per_ch -1) downto 0) := "10";
     constant flag_of_k_err_2     : std_logic_vector((ctrl_code_length_per_ch -1) downto 0) := "11";
     --pattern
-	constant pattern_k0      : std_logic_vector((para_data_length_per_ch -1) downto 0) := X"02BC";
+    constant pattern_k0      : std_logic_vector((para_data_length_per_ch -1) downto 0) := X"02BC";
     constant pattern_K1      : std_logic_vector((para_data_length_per_ch -1) downto 0) := X"00BC";
     constant pattern_K0_swap : std_logic_vector((para_data_length_per_ch -1) downto 0) := X"BC02";
 	constant pattern_B       : std_logic_vector((para_data_length_per_ch -1) downto 0) := X"5678"
@@ -23,16 +23,12 @@ generic (
 port (
     Reset_n                  : in  std_logic;
 
-    rx_freq_locked           : in  std_logic;--arria 10
-
     tx_traffic_ready         : out std_logic;
     rx_traffic_ready         : out std_logic;
-
-    rx_elastic_buf_done      : in  std_logic;--for grouping
+    --rx_sync_done             : in  std_logic;--for grouping
     --rx_can_sync              : out std_logic;--for grouping
-
-    Lane_up_out              : out std_logic;
-    Lane_up_sync_in          : in  std_logic;
+    rx_elastic_buf_done      : in  std_logic;
+    lane_up                  : in  std_logic;
 
     TX_K                     : out std_logic_vector((ctrl_code_length_per_ch -1) downto 0) ;
     RX_K                     : in  std_logic_vector((ctrl_code_length_per_ch -1) downto 0) ;
@@ -40,21 +36,6 @@ port (
     Rx_DATA_Xcvr             : in  std_logic_vector((para_data_length_per_ch -1) downto 0) ;
     Tx_DATA_client           : in  std_logic_vector((para_data_length_per_ch -1) downto 0) ;
     Rx_DATA_client           : out std_logic_vector((para_data_length_per_ch -1) downto 0) ;
-
-    RX_errdetect             : in  std_logic_vector((ctrl_code_length_per_ch -1) downto 0) ;
-    RX_disperr               : in  std_logic_vector((ctrl_code_length_per_ch -1) downto 0) ;
-
-    XCVR_Manual_rst          : out std_logic;
-
-    Tx_xcvrRstIp_is_Ready    : in  std_logic; --arria10
-    Rx_xcvrRstIp_is_Ready    : in  std_logic; --arria10
-
-    rx_sync_status           : in  std_logic_vector((ctrl_code_length_per_ch -1) downto 0); --arria10
-    rx_pattern_detected      : in  std_logic_vector((ctrl_code_length_per_ch -1) downto 0); --arria10
-
-    rx_align_en              : out std_logic; --arria10
-
-    INIT_CLK                 : in  std_logic;
 
     Tx_Clk                   : in  std_logic;
     Rx_Clk                   : in  std_logic
@@ -72,7 +53,8 @@ architecture top of traffic is
         (idle,wait_pattern_k0,wait_pattern_k1,wait_pattern_B,wait_client_data);
     signal rx_status                 : Rx_status_type := wait_pattern_k0 ;
 
-    signal lane_up                   : std_logic := '0';
+    signal lane_up_r_tx              : std_logic := '0';
+    signal lane_up_r_rx              : std_logic := '0';
     signal XCVR_Manual_rst_r         : std_logic := '0';
     signal rx_freq_locked_r          : std_logic := '0';
     signal all_locked_r              : std_logic := '0';
@@ -83,8 +65,8 @@ architecture top of traffic is
     signal RX_disperr_o              : std_logic_vector((ctrl_code_length_per_ch -1) downto 0) := (others => '0');
     signal RX_errdetect_o            : std_logic_vector((ctrl_code_length_per_ch -1) downto 0) := (others => '0');
 
-    signal tx_traffic_ready_r        : std_logic;--arria10
-    signal rx_traffic_ready_r        : std_logic;--arria10
+    signal tx_traffic_ready_r        : std_logic := '0';--arria10
+    signal rx_traffic_ready_r        : std_logic := '0';--arria10
 
     signal rx_sync_status_r          : std_logic_vector((ctrl_code_length_per_ch -1) downto 0) := (others =>'0');--arria10
     signal rx_sync_status_o          : std_logic_vector((ctrl_code_length_per_ch -1) downto 0) := (others =>'0');--arria10
@@ -96,8 +78,8 @@ architecture top of traffic is
     -- signal rx_can_sync_r             : std_logic := '0';--for grouping
 
     signal Rx_DATA_client_r          : std_logic_vector((para_data_length_per_ch -1) downto 0) := (others => '0');
-    signal Rx_DATA_Xcvr_i            : std_logic_vector((para_data_length_per_ch -1) downto 0) := (others => '0');
     signal Rx_DATA_Xcvr_r            : std_logic_vector((para_data_length_per_ch -1) downto 0) := (others => '0');
+    signal Rx_DATA_Xcvr_i            : std_logic_vector((para_data_length_per_ch -1) downto 0) := (others => '0');
 
     signal Tx_DATA_Xcvr_r            : std_logic_vector((para_data_length_per_ch -1) downto 0) := (others => '0');
     signal Tx_DATA_client_r          : std_logic_vector((para_data_length_per_ch -1) downto 0) := (others => '0');
@@ -105,41 +87,40 @@ architecture top of traffic is
     signal Rx_K_i                    : std_logic_vector((ctrl_code_length_per_ch -1) downto 0) := (others =>'0');
     signal Rx_K_r                    : std_logic_vector((ctrl_code_length_per_ch -1) downto 0) := (others =>'0');
 
+
 begin
-    Lane_up_condition_module : entity work.lane_up_condition_checker
-        port map(
-            Reset_n                     => Reset_n,
-            all_locked                  => all_locked_o,--arria 10
-            XCVR_Manual_rst_out         => XCVR_Manual_rst_r, --arria 10
-            align_en                    => rx_align_en_r, --arria 10
-            INIT_CLK                    => INIT_CLK,
-            lane_up                     => lane_up,
-            RX_errdetect                => RX_errdetect_o,
-            RX_disperr                  => RX_disperr_o
-        );
-    Tx_procedure : process(Tx_Clk,Reset_n,Lane_up_sync_in)
+    Tx_procedure : process(Tx_Clk,Reset_n,lane_up)
         variable rx_wait_cnt         : integer range 0 to sent_k_until_clks  := 0;
     begin
-        if (Reset_n = '0' or Lane_up_sync_in = '0') then
+        if (Reset_n = '0' or lane_up = '0') then
             tx_status       <= idle;
 
-            Tx_DATA_Xcvr_r  <= (others => '0');
+            Tx_DATA_Xcvr    <= (others => '0');
             TX_K_r          <= flag_of_k_data;
 
             rx_wait_cnt    := 0;
+
+            tx_traffic_ready <= '0';
         else
             if (rising_edge(Tx_Clk)) then
+                Tx_DATA_client_r <= Tx_DATA_client ;
+                Tx_DATA_Xcvr     <= Tx_DATA_Xcvr_r ;
+                TX_K   <= TX_K_r ;    
+                
+                lane_up_r_tx <= lane_up;
+                tx_traffic_ready <= tx_traffic_ready_r ;
+
                 case tx_status is
                     when idle =>
                         Tx_DATA_Xcvr_r <= (others => '0');
                         TX_K_r <= flag_of_k_data;
-
-                        if (Lane_up_sync_in = '1') then
+                        tx_traffic_ready_r <= '0';
+                        
+                        if (lane_up_r_tx = '1') then
                             tx_status <= sent_pattern_k0_wait_rx_obtain;
                         else
                             tx_status <= idle;
                         end if;
-
                     when sent_pattern_k0_wait_rx_obtain =>
                         Tx_DATA_Xcvr_r <= pattern_k0;
                         TX_K_r         <= flag_of_k_ctrl;
@@ -149,7 +130,6 @@ begin
                         else
                             tx_status <= sent_pattern_k0_wait_rx_obtain ;
                         end if ;
-
                     when sent_pattern_k1_wait_rx_obtain =>
                         Tx_DATA_Xcvr_r <= pattern_K1;
                         TX_K_r         <= flag_of_k_ctrl;
@@ -188,6 +168,8 @@ begin
                         Tx_DATA_Xcvr_r <= Tx_DATA_client_r;
                         TX_K_r         <= flag_of_k_data;
 
+                        tx_traffic_ready_r <= '1';
+
                         tx_status      <= sent_client_data;
 
                     when others =>
@@ -196,22 +178,34 @@ begin
         end if ;
     end process Tx_procedure;
 
-    Rx_procedure : process(Rx_Clk,Reset_n,Lane_up_sync_in)
+    Rx_procedure : process(Rx_Clk,Reset_n,lane_up)
         variable wait_k1_cnt     : integer range 0 to sent_k_until_clks  := 0;
         variable wait_B_cnt      : integer range 0 to sent_k_until_clks  := 0;
     begin
-        if (Reset_n = '0' or Lane_up_sync_in = '0') then
+        if (Reset_n = '0' or lane_up = '0') then
             rx_status        <= idle;
 
-            Rx_DATA_client_r <= (others => '0');
-            flag_swap_r <= '0';
+            Rx_DATA_client   <= (others => '0');
+
+            rx_traffic_ready <= '0';
+
         else
             if (rising_edge(Rx_Clk)) then
+                Rx_DATA_client   <=  Rx_DATA_client_r;
+
+                Rx_DATA_Xcvr_i   <= Rx_DATA_Xcvr;
+                
+                RX_K_i <= RX_K ;
+
+                lane_up_r_rx <= lane_up;
+                rx_traffic_ready <= rx_traffic_ready_r ;
+                flag_swap <= flag_swap_r;
                 case( rx_status ) is
                     when idle =>
                         Rx_DATA_client_r <= (others => '0');
+                        rx_traffic_ready_r <= '0';
 
-                        if (Lane_up_sync_in = '1') then
+                        if (lane_up_r_rx = '1') then
                             rx_status <= wait_pattern_k0 ;
                         else
                             rx_status <= idle;
@@ -259,46 +253,16 @@ begin
 
                         Rx_DATA_client_r <= Rx_DATA_Xcvr_r;
 
+                        rx_traffic_ready_r <= '1';
+
                         rx_status        <= wait_client_data;
                     when others =>
                 end case ;
             end if ;
         end if ;
     end process Rx_procedure;
-
-    Lane_up_out <= lane_up ;
-
-    Tx_DATA_client_r  <=  Tx_DATA_client ;
-    Rx_DATA_client    <=  Rx_DATA_client_r;
-
-    Tx_DATA_Xcvr     <= Tx_DATA_Xcvr_r ;
-    Rx_DATA_Xcvr_i   <= Rx_DATA_Xcvr;
     Rx_DATA_Xcvr_r   <= Rx_DATA_Xcvr_i((para_data_length_per_ch - 1) downto 0) when flag_swap = '0'
-                            else Rx_DATA_Xcvr_i((para_data_length_per_ch/2 - 1) downto 0) & Rx_DATA_Xcvr_i((para_data_length_per_ch - 1) downto (para_data_length_per_ch/2));
-    TX_K   <= TX_K_r ;
-    RX_K_i <= RX_K ;
-    RX_K_r <= RX_K_i((ctrl_code_length_per_ch-1) downto 0) when flag_swap = '0'
+                            else Rx_DATA_Xcvr_i((para_data_length_per_ch/2 - 1) downto 0) & Rx_DATA_Xcvr_i((para_data_length_per_ch - 1) downto (para_data_length_per_ch/2));                            
+    Rx_K_r <= RX_K_i((ctrl_code_length_per_ch-1) downto 0) when flag_swap = '0'
                             else RX_K_i(0) & RX_K_i(ctrl_code_length_per_ch-1);
-
-    XCVR_Manual_rst         <= XCVR_Manual_rst_r;
-
-    RX_errdetect_o <= RX_errdetect;
-    RX_disperr_o   <= RX_disperr;
-
-    rx_align_en <= rx_align_en_r;
-
-    rx_freq_locked_r   <= rx_freq_locked ;
-
-    flag_swap          <= flag_swap_r ;
-
-    all_locked_r       <= Tx_xcvrRstIp_is_Ready and Rx_xcvrRstIp_is_Ready and rx_freq_locked_r;--arria10
-    all_locked_o       <= all_locked_r;
-
-    tx_traffic_ready_r <= '1' when (tx_status = sent_client_data) else '0' ;
-    rx_traffic_ready_r <= '1' when (rx_status = wait_client_data) else '0' ;
-
-    tx_traffic_ready <= tx_traffic_ready_r ;
-    rx_traffic_ready <= rx_traffic_ready_r and rx_elastic_buf_done;
-    --rx_can_sync_r      <= '1' when (tx_status = sent_pattern_B_wait_rx_obtain) else '0';--for grouping
-    --rx_can_sync      <= rx_can_sync_r ;--for grouping
 end architecture top;

@@ -6,7 +6,7 @@ use ieee.numeric_std.all;
 library work;
 use work.DataStruct_param_def_header.all;--invoke our defined type and parameter
 
-entity lane_up_condition_checker is
+entity reset_ctrl is
 generic (
     constant power_on_wait_clks         : integer := 2**16 -1;
     constant wait_locked_clks           : integer := 2**16 -1;
@@ -15,27 +15,58 @@ generic (
 );
 Port (
     Reset_n                  : in  std_logic;
-    all_locked               : in  std_logic;
-    XCVR_Manual_rst_out      : out std_logic; --arria 10
-    align_en                 : out std_logic; --arria 10
     INIT_CLK                 : in  std_logic;
+
+    
+    XCVR_rst_out             : out std_logic;
+    align_en                 : out std_logic; 
     lane_up                  : out std_logic;
-    RX_errdetect             : in  std_logic_vector((ctrl_code_length_per_ch -1) downto 0) := (others =>'0');
-    RX_disperr               : in  std_logic_vector((ctrl_code_length_per_ch -1) downto 0) := (others =>'0')
+    
+    rx_freq_locked           : in  std_logic;
+
+    Tx_xcvrRstIp_is_Ready    : in  std_logic;
+    Rx_xcvrRstIp_is_Ready    : in  std_logic;
+
+    rx_sync_status           : in  ctrl_code_8B10B;
+    rx_pattern_detected      : in  ctrl_code_8B10B;
+    RX_errdetect             : in  ctrl_code_8B10B;
+    RX_disperr               : in  ctrl_code_8B10B
 );
-end entity lane_up_condition_checker;
+end entity reset_ctrl;
 
 
-architecture Behavioral of lane_up_condition_checker is
+architecture Behavioral of reset_ctrl is
 
     type lane_up_condition_type is --for stratix-4
         (power_on ,wait_locked,comma_align,pre_lane_up,now_xcvr_init_done);
     signal lane_up_status            : lane_up_condition_type := power_on;
 
+    signal RX_freq_locked_r          : std_logic := '0';
+    signal XCVR_pll_locked_r         : std_logic := '0';
+    signal all_locked                : std_logic := '0';
+
+    signal RX_errdetect_r            : ser_data_men;
+    signal RX_disperr_r              : ser_data_men;
+    signal RX_errdetect_r2           : std_logic;
+    signal RX_disperr_r2             : std_logic;
+    signal error_happen              : std_logic;
+    signal Tx_xcvrRstIp_is_Ready_r   : std_logic;
+    signal Rx_xcvrRstIp_is_Ready_r   : std_logic;
+
     signal lane_up_r                 : std_logic := '0';
-    signal XCVR_Manual_rst_out_r     : std_logic := '0';
-    signal align_en_r                : std_logic := '0';
+    signal XCVR_rst_out_r            : ser_data_men := (others => '0');
+    signal align_en_r                : std_logic;
+
 begin
+
+    err_signal_loop:for i in 0 to (num_of_xcvr_ch - 1) generate
+        RX_errdetect_r(i)  <= or_reduce(RX_errdetect(i));
+        RX_disperr_r(i)    <= or_reduce(RX_disperr(i));                    
+    end generate err_signal_loop;
+    RX_errdetect_r2 <= or_reduce(RX_errdetect_r);
+    RX_disperr_r2   <= or_reduce(RX_disperr_r);
+    error_happen    <= RX_errdetect_r2 or RX_disperr_r2;
+    
     lane_up_FSM : process(INIT_CLK,Reset_n)
         variable power_on_cnt               : integer range 0 to power_on_wait_clks         := 0 ;
         variable locked_cnt                 : integer range 0 to wait_locked_clks           := 0 ;
@@ -45,33 +76,44 @@ begin
         if (Reset_n = '0') then
             lane_up_status <= power_on ;
 
-            lane_up_r                  <= '0';
-            XCVR_Manual_rst_out_r      <= '1';
-            align_en_r                 <= '0';
+            lane_up                  <= '0';
+            XCVR_rst_out             <= (others => '0');
+            align_en                 <= '0';
 
             power_on_cnt    := 0;
             locked_cnt      := 0;
             comma_align_cnt := 0;
-            pre_lane_up_cnt  := 0;
         else
             if (rising_edge(INIT_CLK)) then
+                lane_up                     <= lane_up_r ;
+                XCVR_rst_out                <= XCVR_rst_out_r;
+                align_en                    <= align_en_r;
+                
+                RX_freq_locked_r    <= and_reduce(RX_freq_locked);
+                XCVR_pll_locked_r   <= XCVR_pll_locked;
+                Tx_xcvrRstIp_is_Ready_r <= Tx_xcvrRstIp_is_Ready;
+                Rx_xcvrRstIp_is_Ready_r <= Rx_xcvrRstIp_is_Ready;
+                all_locked <= RX_freq_locked_r and XCVR_pll_locked_r
+                                Tx_xcvrRstIp_is_Ready_r and Rx_xcvrRstIp_is_Ready_r;
+
                 case( lane_up_status ) is
                     when power_on =>
                         if (power_on_cnt = power_on_wait_clks) then
-                            power_on_cnt            := 0;
-                            lane_up_status          <= wait_locked;
-                            XCVR_Manual_rst_out_r   <= '0';
+                            power_on_cnt     := 0;
+                            lane_up_status   <= wait_locked;
+                            XCVR_rst_out_r   <= (others=> '0');
+                            align_en_r <= '1';
                         else
-                            power_on_cnt            := power_on_cnt + 1;
-                            lane_up_status          <= power_on;
+                            power_on_cnt     := power_on_cnt + 1;
+                            lane_up_status   <= power_on;
 
-                            XCVR_Manual_rst_out_r   <= '1';
-                            lane_up_r               <= '0';
-                            align_en_r              <= '0';
+                            XCVR_rst_out_r   <= (others=> '1');
+                            lane_up_r        <= '0';
+                            align_en_r       <= '0';
                         end if;
 
                     when wait_locked =>
-                        if (all_locked = '1') then
+                        if (all_locked = '1' and ) then
                             if (locked_cnt = wait_locked_clks) then
                                 lane_up_status  <= comma_align;
                                 locked_cnt      := 0;
@@ -83,9 +125,8 @@ begin
                             lane_up_status      <= wait_locked;
                             locked_cnt          := 0;
                         end if;
-
+                        
                     when comma_align =>
-                        align_en_r <= '1';
 
                         if (comma_align_cnt = wait_alignment_done_clks) then
                             comma_align_cnt := 0;
@@ -94,7 +135,6 @@ begin
                             comma_align_cnt := comma_align_cnt + 1;
                             lane_up_status  <= comma_align;
                         end if;
-
                     when pre_lane_up =>
                         lane_up_r <= '1';
 
@@ -107,14 +147,16 @@ begin
                         end if;
 
                     when now_xcvr_init_done =>
-                        if ((RX_errdetect = (RX_errdetect'range => '0')) and (RX_disperr = (RX_disperr'range => '0')) and all_locked = '1') then
-                            lane_up_r               <= '1';
+                        -- now lan-up? checker
+                        if (error_happen = '0' and all_locked = '1') then
+                        --if all_locked = '1' then
+                            lane_up_r <= '1';
                             lane_up_status          <= now_xcvr_init_done ;
-                            XCVR_Manual_rst_out_r   <= '0';
+                            XCVR_rst_out_r <= (others => '0');
                         else
-                            lane_up_r               <= '0';
+                            lane_up_r <= '0';
                             lane_up_status          <= power_on ;
-                            XCVR_Manual_rst_out_r   <= '1';
+                            XCVR_rst_out_r <= (others=> '1');
                         end if;
                     when others =>
 
@@ -122,9 +164,4 @@ begin
             end if;
         end if;
     end process lane_up_FSM;
-
-    --connect reg of output
-    lane_up                     <= lane_up_r ;
-    XCVR_Manual_rst_out         <= XCVR_Manual_rst_out_r;
-    align_en                    <= align_en_r;
 end architecture Behavioral;
