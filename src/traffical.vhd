@@ -1,6 +1,7 @@
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.std_logic_unsigned.all;
+use ieee.std_logic_misc.all;
 
 library work;
 use work.DataStruct_param_def_header.all;--invoke our defined type and parameter

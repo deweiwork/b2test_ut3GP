@@ -25,8 +25,8 @@ entity XCVR_TOP is
         rx_Para_data_bank             : out para_data_men_bank;
         ext_tx_para_data_clk_bank     : out ser_data_men_bank;
         ext_rx_para_data_clk_bank     : out ser_data_men_bank;
-        tx_traffic_ready_ext_bank     : out ser_data_men_bank;
-        rx_traffic_ready_ext_bank     : out ser_data_men_bank;
+        tx_traffic_ready_ext_bank     : out std_logic;
+        rx_traffic_ready_ext_bank     : out std_logic;
 
         error_cnt_ch_bank             : out para_data_men_bank;
 
@@ -46,8 +46,8 @@ architecture XCVR_TOP_connect of XCVR_TOP is
     signal ext_tx_para_data_clk_bank_buf     : ser_data_men_bank ;
     signal ext_rx_para_data_clk_bank_buf     : ser_data_men_bank ;
 
-    signal tx_traffic_ready_ext_bank_buf     : ser_data_men_bank ;
-    signal rx_traffic_ready_ext_bank_buf     : ser_data_men_bank ;
+    signal tx_traffic_ready_ext_bank_buf     : std_logic ;
+    signal rx_traffic_ready_ext_bank_buf     : std_logic ;
 
     --clock  and clock buffer
     signal Ref_Clock_buffer_out         : std_logic := '0';
@@ -86,8 +86,8 @@ begin
             RX_para_external_ch         => rx_Para_data_bank_buf(i),
             TX_para_external_clk_ch     => ext_tx_para_data_clk_bank_buf(i),
             RX_para_external_clk_ch     => ext_rx_para_data_clk_bank_buf(i),
-            tx_traffic_ready_ext_ch     => tx_traffic_ready_ext_bank_buf(i),
-            rx_traffic_ready_ext_ch     => rx_traffic_ready_ext_bank_buf(i),
+            tx_traffic_ready_ext_ch     => tx_traffic_ready_ext_bank_buf,
+            rx_traffic_ready_ext_ch     => rx_traffic_ready_ext_bank_buf,
             error_cnt_ch                => error_cnt_ch_bank_buf(i),
 
             RX_ser                      => RX_ser_bank(i),

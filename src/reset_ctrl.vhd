@@ -2,6 +2,7 @@ library ieee;
 use ieee.std_logic_1164.all;
 use ieee.std_logic_unsigned.all;
 use ieee.numeric_std.all;
+use ieee.std_logic_misc.all;
 
 library work;
 use work.DataStruct_param_def_header.all;--invoke our defined type and parameter
@@ -18,14 +19,14 @@ Port (
     INIT_CLK                 : in  std_logic;
 
     
-    XCVR_rst_out             : out std_logic;
+    XCVR_rst_out             : out ser_data_men;
     align_en                 : out std_logic; 
     lane_up                  : out std_logic;
     
-    rx_freq_locked           : in  std_logic;
+    rx_freq_locked           : in  ser_data_men;
 
-    Tx_xcvrRstIp_is_Ready    : in  std_logic;
-    Rx_xcvrRstIp_is_Ready    : in  std_logic;
+    Tx_xcvrRstIp_is_Ready    : in  ser_data_men;
+    Rx_xcvrRstIp_is_Ready    : in  ser_data_men;
 
     rx_sync_status           : in  ctrl_code_8B10B;
     rx_pattern_detected      : in  ctrl_code_8B10B;
@@ -52,6 +53,7 @@ architecture Behavioral of reset_ctrl is
     signal error_happen              : std_logic;
     signal Tx_xcvrRstIp_is_Ready_r   : std_logic;
     signal Rx_xcvrRstIp_is_Ready_r   : std_logic;
+    signal rst_ip_done               : std_logic;
 
     signal lane_up_r                 : std_logic := '0';
     signal XCVR_rst_out_r            : ser_data_men := (others => '0');
@@ -66,6 +68,9 @@ begin
     RX_errdetect_r2 <= or_reduce(RX_errdetect_r);
     RX_disperr_r2   <= or_reduce(RX_disperr_r);
     error_happen    <= RX_errdetect_r2 or RX_disperr_r2;
+    
+    Rx_xcvrRstIp_is_Ready_r <= and_reduce(Rx_xcvrRstIp_is_Ready);
+    Tx_xcvrRstIp_is_Ready_r <= and_reduce(Tx_xcvrRstIp_is_Ready);
     
     lane_up_FSM : process(INIT_CLK,Reset_n)
         variable power_on_cnt               : integer range 0 to power_on_wait_clks         := 0 ;
@@ -90,11 +95,12 @@ begin
                 align_en                    <= align_en_r;
                 
                 RX_freq_locked_r    <= and_reduce(RX_freq_locked);
-                XCVR_pll_locked_r   <= XCVR_pll_locked;
-                Tx_xcvrRstIp_is_Ready_r <= Tx_xcvrRstIp_is_Ready;
-                Rx_xcvrRstIp_is_Ready_r <= Rx_xcvrRstIp_is_Ready;
-                all_locked <= RX_freq_locked_r and XCVR_pll_locked_r
-                                Tx_xcvrRstIp_is_Ready_r and Rx_xcvrRstIp_is_Ready_r;
+                --XCVR_pll_locked_r   <= XCVR_pll_locked;
+                rst_ip_done <= Tx_xcvrRstIp_is_Ready_r and Rx_xcvrRstIp_is_Ready_r;
+
+                -- all_locked <= RX_freq_locked_r and XCVR_pll_locked_r
+                --                 rst_ip_done;
+                all_locked <= RX_freq_locked_r and rst_ip_done;
 
                 case( lane_up_status ) is
                     when power_on =>
@@ -113,7 +119,7 @@ begin
                         end if;
 
                     when wait_locked =>
-                        if (all_locked = '1' and ) then
+                        if (all_locked = '1') then
                             if (locked_cnt = wait_locked_clks) then
                                 lane_up_status  <= comma_align;
                                 locked_cnt      := 0;
