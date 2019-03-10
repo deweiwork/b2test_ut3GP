@@ -1,5 +1,5 @@
 -------------------------------------------------------------------------------
--- Copyright (c) 2018 Xilinx, Inc.
+-- Copyright (c) 2019 Xilinx, Inc.
 -- All Rights Reserved
 -------------------------------------------------------------------------------
 --   ____  ____
@@ -8,7 +8,7 @@
 -- \   \   \/     Version    : 14.7
 --  \   \         Application: XILINX CORE Generator
 --  /   /         Filename   : chipscope_icon.vhd
--- /___/   /\     Timestamp  : Mon Nov 19 22:26:52 台北標準時間 2018
+-- /___/   /\     Timestamp  : Sun Mar 10 17:01:36 台北標準時間 2019
 -- \   \  /  \
 --  \___\/\___\
 --
@@ -20,7 +20,8 @@ LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
 ENTITY chipscope_icon IS
   port (
-    CONTROL0: inout std_logic_vector(35 downto 0));
+    CONTROL0: inout std_logic_vector(35 downto 0);
+    CONTROL1: inout std_logic_vector(35 downto 0));
 END chipscope_icon;
 
 ARCHITECTURE chipscope_icon_a OF chipscope_icon IS

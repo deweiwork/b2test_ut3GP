@@ -1,7 +1,7 @@
 #Release 14.7 - par P.20131013 (nt64)
 #Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-#Sun Mar 10 16:29:35 2019
+#Sun Mar 10 17:22:28 2019
 
 #
 ## NOTE: This file is designed to be imported into a spreadsheet program
@@ -743,7 +743,7 @@ AT21,,,GND,,,,,,,,,,,,
 AT22,rx_Para_data_bank<0><3><15>,IOB,IO_L3N_20,OUTPUT,LVCMOS25*,20,12,SLOW,,,,UNLOCATED,NO,NONE,
 AT23,rx_Para_data_bank<0><3><14>,IOB,IO_L3P_20,OUTPUT,LVCMOS25*,20,12,SLOW,,,,UNLOCATED,NO,NONE,
 AT24,rx_Para_data_bank<0><3><2>,IOB,IO_L17P_21,OUTPUT,LVCMOS25*,21,12,SLOW,,,,UNLOCATED,NO,NONE,
-AT25,error_cnt_ch_bank<0><2><5>,IOB,IO_L0P_21,OUTPUT,LVCMOS25*,21,12,SLOW,,,,UNLOCATED,YES,NONE,
+AT25,error_cnt_ch_bank<0><2><0>,IOB,IO_L0P_21,OUTPUT,LVCMOS25*,21,12,SLOW,,,,UNLOCATED,YES,NONE,
 AT26,,,VCCO_21,,,21,,,,,2.50,,,,
 AT27,,IOBS,IO_L7N_22,UNUSED,,22,,,,,,,,,
 AT28,,IOBS,IO_L4N_VREF_22,UNUSED,,22,,,,,,,,,
@@ -920,7 +920,7 @@ AY22,rx_Para_data_bank<0><1><12>,IOB,IO_L10P_MRCC_20,OUTPUT,LVCMOS25*,20,12,SLOW
 AY23,rx_Para_data_bank<0><2><4>,IOB,IO_L14P_20,OUTPUT,LVCMOS25*,20,12,SLOW,,,,UNLOCATED,NO,NONE,
 AY24,,,VCCO_21,,,21,,,,,2.50,,,,
 AY25,error_cnt_ch_bank<0><2><15>,IOB,IO_L7N_21,OUTPUT,LVCMOS25*,21,12,SLOW,,,,UNLOCATED,YES,NONE,
-AY26,error_cnt_ch_bank<0><2><0>,IOB,IO_L2N_21,OUTPUT,LVCMOS25*,21,12,SLOW,,,,UNLOCATED,YES,NONE,
+AY26,error_cnt_ch_bank<0><2><5>,IOB,IO_L2N_21,OUTPUT,LVCMOS25*,21,12,SLOW,,,,UNLOCATED,YES,NONE,
 AY27,,IOBM,IO_L17P_22,UNUSED,,22,,,,,,,,,
 AY28,,IOBM,IO_L8P_SRCC_22,UNUSED,,22,,,,,,,,,
 AY29,,,GND,,,,,,,,,,,,

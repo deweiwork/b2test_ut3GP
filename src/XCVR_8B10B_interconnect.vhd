@@ -108,7 +108,8 @@ architecture XCVR_8B10B_interconnect_Top of XCVR_8B10B_interconnect is
     signal tx_clk_buf_out_to_ext        : ser_data_men := (others =>'0');
     signal rx_clk_buf_out_to_ext        : ser_data_men := (others =>'0');
     --chip scope
-    signal chip_scope_ctrl              : std_logic_vector(35 downto 0);
+    signal chip_scope_ctrl_0            : std_logic_vector(35 downto 0);
+    signal chip_scope_ctrl_1            : std_logic_vector(35 downto 0);
 
     --8b10b and align
     signal pattern_is_comma             : ctrl_code_8B10B;
@@ -469,24 +470,23 @@ port
 end component;
 
     component chipscope_icon
-      PORT (
-        CONTROL0 : INOUT STD_LOGIC_VECTOR(35 DOWNTO 0));
+    PORT (
+        CONTROL0 : INOUT STD_LOGIC_VECTOR(35 DOWNTO 0);
+        CONTROL1 : INOUT STD_LOGIC_VECTOR(35 DOWNTO 0));
+
     end component;
     component chipscope_ila
-      PORT (
-        CONTROL : INOUT STD_LOGIC_VECTOR(35 DOWNTO 0);
-        CLK : IN STD_LOGIC;
-        TRIG0 : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
-        TRIG1 : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
-        TRIG2 : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
-        TRIG3 : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
-        TRIG4 : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
-        TRIG5 : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
-        TRIG6 : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
-        TRIG7 : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
-        TRIG8 : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
-        TRIG9 : IN STD_LOGIC_VECTOR(15 DOWNTO 0));
-    end component;
+    PORT (
+      CONTROL : INOUT STD_LOGIC_VECTOR(35 DOWNTO 0);
+      CLK : IN STD_LOGIC;
+      TRIG0 : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
+      TRIG1 : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
+      TRIG2 : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
+      TRIG3 : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
+      TRIG4 : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
+      TRIG5 : IN STD_LOGIC_VECTOR(15 DOWNTO 0));
+  
+  end component;
 
 
 begin
@@ -910,24 +910,31 @@ begin
 
 
     icon : chipscope_icon
-        port map (
-            CONTROL0 => chip_scope_ctrl
-        );
+    port map (
+      CONTROL0 => chip_scope_ctrl_0,
+      CONTROL1 => chip_scope_ctrl_1);
 
-    ila : chipscope_ila
+    ila_tx : chipscope_ila
         port map (
-            CONTROL => chip_scope_ctrl,
-            CLK => rx_clk_buf_out(0),
+            CONTROL => chip_scope_ctrl_0,
+            CLK => tx_clk_buf_out(0),
             TRIG0 => tx_Para_data_ch(0),
             TRIG1 => tx_Para_data_ch(1),
             TRIG2 => tx_Para_data_ch(2),
             TRIG3 => tx_Para_data_ch(3),
-            TRIG4 => rx_Para_data_ch(0),
-            TRIG5 => rx_Para_data_ch(1),
-            TRIG6 => rx_Para_data_ch(2),
-            TRIG7 => rx_Para_data_ch(3),
-				TRIG8 =>  RST_N & lane_up & TX_traffic_ready_ch & RX_traffic_ready_ch,
-				TRIG9 => (others =>'0')
+            TRIG4 => (others =>'0'),
+            TRIG5 => (others =>'0')
+        );
+    ila_rx : chipscope_ila
+        port map (
+            CONTROL => chip_scope_ctrl_1,
+            CLK => rx_clk_buf_out(0),
+            TRIG0 => rx_Para_data_ch(0),
+            TRIG1 => rx_Para_data_ch(1),
+            TRIG2 => rx_Para_data_ch(2),
+            TRIG3 => rx_Para_data_ch(3),
+            TRIG4 => (others =>'0'),
+            TRIG5 => (others =>'0')
         );
 
 end architecture XCVR_8B10B_interconnect_Top;
