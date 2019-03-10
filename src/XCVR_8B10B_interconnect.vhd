@@ -484,7 +484,7 @@ end component;
         TRIG5 : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
         TRIG6 : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
         TRIG7 : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
-        TRIG8 : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
+        TRIG8 : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
         TRIG9 : IN STD_LOGIC_VECTOR(15 DOWNTO 0));
     end component;
 
@@ -879,69 +879,6 @@ begin
         RX_errdetect             => rx_err_detec_ch,
         RX_disperr               => rx_disp_err_ch
     );
-    -- manual_rst_and_gate : entity work.n_in_1_out_and_gate_1clk
-    -- port map (
-    --     sync_clock      => init_clock,
-    --     RST_N           => RST_N,
-    --     n_in            => XCVR_TxRx_rst_out_r,
-    --     and_gate_out    => XCVR_TxRx_rst_after_and
-    -- );
-    -- loop_connect_manual_rst_and_gate_sync: for i in 0 to (num_of_xcvr_ch -1) generate
-    --     if_grouping : if grouping_enable = '1' generate
-    --         XCVR_TxRx_rst(i) <= XCVR_TxRx_rst_after_and;
-    --     end generate if_grouping;
-    --     if_no_grouping : if grouping_enable = '0' generate
-    --         XCVR_TxRx_rst(i) <= XCVR_TxRx_rst_out_r(i);
-    --     end generate if_no_grouping;
-    -- end generate loop_connect_manual_rst_and_gate_sync;
-
-    -- lane_up_and_gate : entity work.n_in_1_out_and_gate_1clk
-    -- port map (
-    --     sync_clock      => init_clock,
-    --     RST_N           => RST_N,
-    --     n_in            => lane_up_per_ch,
-    --     and_gate_out    => lane_up_sync_after_and
-    -- );
-    -- loop_connect_lane_up_sync: for i in 0 to (num_of_xcvr_ch -1) generate
-    --     if_grouping : if grouping_enable = '1' generate
-    --         lane_up_sync(i) <= lane_up_sync_after_and;
-    --     end generate if_grouping;
-    --     if_no_grouping : if grouping_enable = '0' generate
-    --         lane_up_sync(i) <= lane_up_per_ch(i);
-    --     end generate if_no_grouping;
-    -- end generate loop_connect_lane_up_sync;
-
-    -- tx_traffic_and_gate : entity work.n_in_1_out_and_gate
-    -- port map (
-    --     RST_N           => RST_N,
-    --     sync_clock      => tx_clk_buf_out,
-    --     n_in            => TX_traffic_ready_ch_r,
-    --     and_gate_out    => TX_traffic_ready_ch_after_and
-    -- );
-    -- loop_tx_traffic_sync: for i in 0 to (num_of_xcvr_ch -1) generate
-    --     if_grouping : if grouping_enable = '1' generate
-    --         TX_traffic_ready_ch(i) <= TX_traffic_ready_ch_after_and;
-    --     end generate if_grouping;
-    --     if_no_grouping : if grouping_enable = '0' generate
-    --         TX_traffic_ready_ch(i) <= TX_traffic_ready_ch_r(i);
-    --     end generate if_no_grouping;
-    -- end generate loop_tx_traffic_sync;
-
-    -- rx_traffic_and_gate : entity work.n_in_1_out_and_gate
-    -- port map (
-    --     RST_N           => RST_N,
-    --     sync_clock      => rx_clk_buf_out,
-    --     n_in            => RX_traffic_ready_ch_r,
-    --     and_gate_out    => RX_traffic_ready_ch_after_and
-    -- );
-    -- loop_rx_traffic_sync: for i in 0 to (num_of_xcvr_ch -1) generate
-    --     if_grouping : if grouping_enable = '1' generate
-    --         RX_traffic_ready_ch(i) <= RX_traffic_ready_ch_after_and;
-    --     end generate if_grouping;
-    --     if_no_grouping : if grouping_enable = '0' generate
-    --         RX_traffic_ready_ch(i) <= RX_traffic_ready_ch_r(i);
-    --     end generate if_no_grouping;
-    -- end generate loop_rx_traffic_sync;
 
     generate_TX_BUFG_loop : for i in 0 to (num_of_xcvr_ch - 1) generate
         xcvr_tx_data_clk_buf_used_assert : if xcvr_tx_data_clk_buf_used = '1' generate
@@ -989,8 +926,8 @@ begin
             TRIG5 => rx_Para_data_ch(1),
             TRIG6 => rx_Para_data_ch(2),
             TRIG7 => rx_Para_data_ch(3),
-				TRIG8 => (others =>'0'),
-				TRIG9 => (others =>'1')
+				TRIG8 =>  RST_N & lane_up & TX_traffic_ready_ch & RX_traffic_ready_ch,
+				TRIG9 => (others =>'0')
         );
 
 end architecture XCVR_8B10B_interconnect_Top;

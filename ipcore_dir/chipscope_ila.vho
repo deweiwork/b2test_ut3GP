@@ -1,5 +1,5 @@
 -------------------------------------------------------------------------------
--- Copyright (c) 2018 Xilinx, Inc.
+-- Copyright (c) 2019 Xilinx, Inc.
 -- All Rights Reserved
 -------------------------------------------------------------------------------
 --   ____  ____
@@ -8,7 +8,7 @@
 -- \   \   \/     Version    : 14.7
 --  \   \         Application: Xilinx CORE Generator
 --  /   /         Filename   : chipscope_ila.vho
--- /___/   /\     Timestamp  : Mon Aug 20 23:44:15 台北標準時間 2018
+-- /___/   /\     Timestamp  : Sun Mar 10 14:06:06 台北標準時間 2019
 -- \   \  /  \
 --  \___\/\___\
 --
@@ -30,7 +30,7 @@ component chipscope_ila
     TRIG5 : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
     TRIG6 : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
     TRIG7 : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
-    TRIG8 : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
+    TRIG8 : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
     TRIG9 : IN STD_LOGIC_VECTOR(15 DOWNTO 0));
 
 end component;

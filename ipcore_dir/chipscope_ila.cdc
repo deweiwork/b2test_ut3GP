@@ -1,5 +1,5 @@
 #ChipScope Core Generator Project File Version 3.0
-#Mon Aug 20 23:44:19 台北標準時間 2018
+#Sun Mar 10 14:06:11 台北標準時間 2019
 SignalExport.bus<0000>.channelList=0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15
 SignalExport.bus<0000>.name=TRIG0
 SignalExport.bus<0000>.offset=0.0
@@ -48,13 +48,13 @@ SignalExport.bus<0007>.offset=0.0
 SignalExport.bus<0007>.precision=0
 SignalExport.bus<0007>.radix=Bin
 SignalExport.bus<0007>.scaleFactor=1.0
-SignalExport.bus<0008>.channelList=128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143
+SignalExport.bus<0008>.channelList=128 129 130 131 132 133 134 135 136 137
 SignalExport.bus<0008>.name=TRIG8
 SignalExport.bus<0008>.offset=0.0
 SignalExport.bus<0008>.precision=0
 SignalExport.bus<0008>.radix=Bin
 SignalExport.bus<0008>.scaleFactor=1.0
-SignalExport.bus<0009>.channelList=144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159
+SignalExport.bus<0009>.channelList=138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153
 SignalExport.bus<0009>.name=TRIG9
 SignalExport.bus<0009>.offset=0.0
 SignalExport.bus<0009>.precision=0
@@ -200,12 +200,6 @@ SignalExport.triggerChannel<0008><0006>=TRIG8[6]
 SignalExport.triggerChannel<0008><0007>=TRIG8[7]
 SignalExport.triggerChannel<0008><0008>=TRIG8[8]
 SignalExport.triggerChannel<0008><0009>=TRIG8[9]
-SignalExport.triggerChannel<0008><0010>=TRIG8[10]
-SignalExport.triggerChannel<0008><0011>=TRIG8[11]
-SignalExport.triggerChannel<0008><0012>=TRIG8[12]
-SignalExport.triggerChannel<0008><0013>=TRIG8[13]
-SignalExport.triggerChannel<0008><0014>=TRIG8[14]
-SignalExport.triggerChannel<0008><0015>=TRIG8[15]
 SignalExport.triggerChannel<0009><0000>=TRIG9[0]
 SignalExport.triggerChannel<0009><0001>=TRIG9[1]
 SignalExport.triggerChannel<0009><0002>=TRIG9[2]
@@ -251,7 +245,7 @@ SignalExport.triggerPortWidth<0004>=16
 SignalExport.triggerPortWidth<0005>=16
 SignalExport.triggerPortWidth<0006>=16
 SignalExport.triggerPortWidth<0007>=16
-SignalExport.triggerPortWidth<0008>=16
+SignalExport.triggerPortWidth<0008>=10
 SignalExport.triggerPortWidth<0009>=16
 SignalExport.type=ila
 
