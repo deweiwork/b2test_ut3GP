@@ -1,7 +1,7 @@
 Release 14.7 - par P.20131013 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-Sun Mar 10 17:22:28 2019
+Mon Mar 11 13:42:04 2019
 
 
 # NOTE: This file is designed to be imported into a spreadsheet program
@@ -907,9 +907,9 @@ AY9|||GND||||||||||||
 AY10||IOBM|IO_L1P_32|UNUSED||32|||||||||
 AY11||IOBS|IO_L4N_VREF_32|UNUSED||32|||||||||
 AY12||IOBM|IO_L4P_32|UNUSED||32|||||||||
-AY13|tx_traffic_ready_ext_bank|IOB|IO_L16N_31|OUTPUT|LVCMOS25*|31|12|SLOW||||UNLOCATED|NO|NONE|
+AY13|rx_traffic_ready_ext_bank<0>|IOB|IO_L16N_31|OUTPUT|LVCMOS25*|31|12|SLOW||||UNLOCATED|NO|NONE|
 AY14|||VCCO_31|||31|||||2.50||||
-AY15|rx_traffic_ready_ext_bank|IOB|IO_L19P_31|OUTPUT|LVCMOS25*|31|12|SLOW||||UNLOCATED|NO|NONE|
+AY15|tx_traffic_ready_ext_bank<0>|IOB|IO_L19P_31|OUTPUT|LVCMOS25*|31|12|SLOW||||UNLOCATED|NO|NONE|
 AY16||IOBS|IO_L15N_30|UNUSED||30|||||||||
 AY17||IOBM|IO_L15P_30|UNUSED||30|||||||||
 AY18|rx_Para_data_bank<0><0><11>|IOB|IO_L7P_30|OUTPUT|LVCMOS25*|30|12|SLOW||||UNLOCATED|NO|NONE|

@@ -10,7 +10,7 @@ Target Device  : xc6vhx380t
 Target Package : ff1923
 Target Speed   : -2
 Mapper Version : virtex6 -- $Revision: 1.55 $
-Mapped Date    : Sun Mar 10 17:20:06 2019
+Mapped Date    : Mon Mar 11 13:39:41 2019
 
 Design Summary
 --------------
@@ -1082,8 +1082,8 @@ Section 6 - IOB Properties
 | rx_Para_data_bank<0><3><13>        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
 | rx_Para_data_bank<0><3><14>        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
 | rx_Para_data_bank<0><3><15>        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
-| rx_traffic_ready_ext_bank          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
-| tx_traffic_ready_ext_bank          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| rx_traffic_ready_ext_bank<0>       | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| tx_traffic_ready_ext_bank<0>       | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
 +---------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 Section 7 - RPMs

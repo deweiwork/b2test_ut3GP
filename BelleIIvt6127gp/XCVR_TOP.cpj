@@ -1,5 +1,5 @@
 #ChipScope Pro Analyzer Project File, Version 3.0
-#Sun Mar 10 17:32:59 CST 2019
+#Mon Mar 11 13:38:54 CST 2019
 device.0.configFileDir=C\:\\Users\\B1409_Server\\Desktop\\BelleII_Xilinx\\BelleIIvt6127gp
 device.0.configFilename=xcvr_top.bit
 device.0.inserterCDCFileDir=C\:\\Users\\B1409_Server\\Desktop\\BelleII_Xilinx\\BelleIIvt6127gp
@@ -32,7 +32,7 @@ signalDisplayPath=0
 unit.-1.-1.username=
 unit.0.-1.coretype=SYSTEM MONITOR
 unit.0.-1.port.-1.buscount=0
-unit.0.-1.port.-1.channelcount=4
+unit.0.-1.port.-1.channelcount=0
 unit.0.-1.port.-1.s.0.alias=Die Temperature
 unit.0.-1.port.-1.s.0.color=java.awt.Color[r\=0,g\=0,b\=124]
 unit.0.-1.port.-1.s.0.name=Die Temperature
@@ -62,7 +62,7 @@ unit.0.0.0.TriggerRow2=1
 unit.0.0.0.WIDTH0=0.5043145
 unit.0.0.0.X0=0.0
 unit.0.0.0.Y0=0.0
-unit.0.0.1.HEIGHT1=0.614654
+unit.0.0.1.HEIGHT1=0.3175034
 unit.0.0.1.WIDTH1=1.0067114
 unit.0.0.1.X1=9.587728E-4
 unit.0.0.1.Y1=0.31614655

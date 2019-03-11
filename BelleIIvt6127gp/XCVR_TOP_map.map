@@ -10,7 +10,7 @@ Target Device  : xc6vhx380t
 Target Package : ff1923
 Target Speed   : -2
 Mapper Version : virtex6 -- $Revision: 1.55 $
-Mapped Date    : Sun Mar 10 17:20:06 2019
+Mapped Date    : Mon Mar 11 13:39:41 2019
 
 Mapping design into LUTs...
 Running directed packing...
@@ -23,56 +23,56 @@ Total REAL time at the beginning of Placer: 36 secs
 Total CPU  time at the beginning of Placer: 36 secs 
 
 Phase 1.1  Initial Placement Analysis
-Phase 1.1  Initial Placement Analysis (Checksum:3a392621) REAL time: 57 secs 
+Phase 1.1  Initial Placement Analysis (Checksum:98eb7ea) REAL time: 57 secs 
 
 Phase 2.7  Design Feasibility Check
 INFO:Place:834 - Only a subset of IOs are locked. Out of 142 IOs, 3 are locked
    and 139 are not locked. If you would like to print the names of these IOs,
    please set the environment variable XIL_PAR_DESIGN_CHECK_VERBOSE to 1. 
-Phase 2.7  Design Feasibility Check (Checksum:3a392621) REAL time: 58 secs 
+Phase 2.7  Design Feasibility Check (Checksum:98eb7ea) REAL time: 58 secs 
 
 Phase 3.31  Local Placement Optimization
-Phase 3.31  Local Placement Optimization (Checksum:b4d3f53f) REAL time: 58 secs 
+Phase 3.31  Local Placement Optimization (Checksum:84298708) REAL time: 58 secs 
 
 Phase 4.37  Local Placement Optimization
-Phase 4.37  Local Placement Optimization (Checksum:b4d3f53f) REAL time: 58 secs 
+Phase 4.37  Local Placement Optimization (Checksum:84298708) REAL time: 58 secs 
 
 Phase 5.2  Initial Placement for Architecture Specific Features
 ....
 Phase 5.2  Initial Placement for Architecture Specific Features
-(Checksum:e1a468c5) REAL time: 1 mins 4 secs 
+(Checksum:b0f9fa8e) REAL time: 1 mins 4 secs 
 
 Phase 6.36  Local Placement Optimization
-Phase 6.36  Local Placement Optimization (Checksum:e1a468c5) REAL time: 1 mins 4 secs 
+Phase 6.36  Local Placement Optimization (Checksum:b0f9fa8e) REAL time: 1 mins 4 secs 
 
 Phase 7.30  Global Clock Region Assignment
-Phase 7.30  Global Clock Region Assignment (Checksum:e1a468c5) REAL time: 1 mins 4 secs 
+Phase 7.30  Global Clock Region Assignment (Checksum:b0f9fa8e) REAL time: 1 mins 4 secs 
 
 Phase 8.3  Local Placement Optimization
 ......
-Phase 8.3  Local Placement Optimization (Checksum:57031405) REAL time: 1 mins 5 secs 
+Phase 8.3  Local Placement Optimization (Checksum:466e7b67) REAL time: 1 mins 6 secs 
 
 Phase 9.5  Local Placement Optimization
-Phase 9.5  Local Placement Optimization (Checksum:57031405) REAL time: 1 mins 5 secs 
+Phase 9.5  Local Placement Optimization (Checksum:466e7b67) REAL time: 1 mins 6 secs 
 
 Phase 10.8  Global Placement
 ................................
 ..............................................................................................
 ...................................................................................................................................................................
 ....................
-Phase 10.8  Global Placement (Checksum:4c552187) REAL time: 1 mins 11 secs 
+Phase 10.8  Global Placement (Checksum:3bc088e9) REAL time: 1 mins 12 secs 
 
 Phase 11.5  Local Placement Optimization
-Phase 11.5  Local Placement Optimization (Checksum:4c552187) REAL time: 1 mins 11 secs 
+Phase 11.5  Local Placement Optimization (Checksum:3bc088e9) REAL time: 1 mins 12 secs 
 
 Phase 12.18  Placement Optimization
-Phase 12.18  Placement Optimization (Checksum:98a3b630) REAL time: 1 mins 17 secs 
+Phase 12.18  Placement Optimization (Checksum:8762e7ac) REAL time: 1 mins 17 secs 
 
 Phase 13.5  Local Placement Optimization
-Phase 13.5  Local Placement Optimization (Checksum:98a3b630) REAL time: 1 mins 17 secs 
+Phase 13.5  Local Placement Optimization (Checksum:8762e7ac) REAL time: 1 mins 17 secs 
 
 Phase 14.34  Placement Validation
-Phase 14.34  Placement Validation (Checksum:f7e9d975) REAL time: 1 mins 17 secs 
+Phase 14.34  Placement Validation (Checksum:e6a90af1) REAL time: 1 mins 17 secs 
 
 Total REAL time to Placer completion: 1 mins 17 secs 
 Total CPU  time to Placer completion: 1 mins 17 secs 
