@@ -46,12 +46,22 @@ end traffic;
 
 
 architecture top of traffic is
-    type Tx_status_type is
-        (idle,sent_pattern_k0_wait_rx_obtain,sent_pattern_k1_wait_rx_obtain,sent_pattern_B_wait_rx_obtain,sent_client_data);
+    type Tx_status_type is(
+	 idle,
+	 sent_pattern_k0_wait_rx_obtain,
+	 sent_pattern_k1_wait_rx_obtain,
+	 sent_pattern_B_wait_rx_obtain,
+	 sent_client_data
+    );
     signal tx_status                 : Tx_status_type := sent_pattern_k0_wait_rx_obtain ;
 
-    type Rx_status_type is
-        (idle,wait_pattern_k0,wait_pattern_k1,wait_pattern_B,wait_client_data);
+    type Rx_status_type is(
+	 idle,
+	 wait_pattern_k0,
+	 wait_pattern_k1,
+	 wait_pattern_B,
+	 wait_client_data
+    );
     signal rx_status                 : Rx_status_type := wait_pattern_k0 ;
 
     signal lane_up_r_tx              : std_logic := '0';
