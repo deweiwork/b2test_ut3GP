@@ -55,12 +55,6 @@ architecture XCVR_8B10B_interconnect_Top of XCVR_8B10B_interconnect is
     signal tx_Para_data_ch              : para_data_men;
     signal rx_Para_data_ch              : para_data_men;
 
-    signal tx_Para_data_external_buf_ch : para_data_men;
-    signal rx_Para_data_external_buf_ch : para_data_men;
-
-    signal tx_Para_data_internal_buf_ch : para_data_men;
-    signal rx_Para_data_internal_buf_ch : para_data_men;
-
     signal tx_Para_data_internal_ch     : para_data_men;
     signal rx_Para_data_internal_ch     : para_data_men;
 
@@ -495,17 +489,11 @@ begin
     internal_loopback_en_ch <= xcvr_ser_internal_loopback_en; --on the xilinx virtex-6 platform
 
     --connecte para data with internal/external selector
-    tx_Para_data_ch <= tx_Para_data_external_buf_ch when scr_para_Data_gen_check_form_this_module = '0';
-    tx_Para_data_ch <= tx_Para_data_internal_buf_ch when scr_para_Data_gen_check_form_this_module = '1';
+    tx_Para_data_ch <= TX_para_external_ch when scr_para_Data_gen_check_form_this_module = '0';
+    tx_Para_data_ch <= tx_Para_data_internal_ch when scr_para_Data_gen_check_form_this_module = '1';
 
-    rx_Para_data_external_buf_ch <= rx_Para_data_ch when scr_para_Data_gen_check_form_this_module = '0';
-    rx_Para_data_internal_buf_ch <= rx_Para_data_ch when scr_para_Data_gen_check_form_this_module = '1';
-
-    tx_Para_data_internal_buf_ch <= tx_Para_data_internal_ch when scr_para_Data_gen_check_form_this_module = '1';
-    tx_Para_data_external_buf_ch <= TX_para_external_ch      when scr_para_Data_gen_check_form_this_module = '0';
-
-    rx_Para_data_internal_ch <= rx_Para_data_internal_buf_ch when scr_para_Data_gen_check_form_this_module = '1';
-    RX_para_external_ch      <= rx_Para_data_external_buf_ch when scr_para_Data_gen_check_form_this_module = '0';
+    rx_Para_data_internal_ch <= rx_Para_data_ch when scr_para_Data_gen_check_form_this_module = '1';
+    RX_para_external_ch      <= rx_Para_data_ch when scr_para_Data_gen_check_form_this_module = '0';
 
     TX_para_external_clk_ch <= tx_clk_buf_out when scr_para_Data_gen_check_form_this_module = '0';
     RX_para_external_clk_ch <= rx_clk_buf_out when scr_para_Data_gen_check_form_this_module = '0';

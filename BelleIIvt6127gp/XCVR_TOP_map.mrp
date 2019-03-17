@@ -10,7 +10,7 @@ Target Device  : xc6vhx380t
 Target Package : ff1923
 Target Speed   : -2
 Mapper Version : virtex6 -- $Revision: 1.55 $
-Mapped Date    : Mon Mar 11 13:39:41 2019
+Mapped Date    : Sun Mar 17 14:36:34 2019
 
 Design Summary
 --------------
@@ -36,16 +36,16 @@ Slice Logic Utilization:
         Number using O5 output only:             2
         Number using O5 and O6:                 88
     Number used exclusively as route-thrus:    408
-      Number with same-slice register load:    248
-      Number with same-slice carry load:       160
+      Number with same-slice register load:    245
+      Number with same-slice carry load:       163
       Number with other load:                    0
 
 Slice Logic Distribution:
-  Number of occupied Slices:                   692 out of  59,760    1%
-  Number of LUT Flip Flop pairs used:        1,975
-    Number with an unused Flip Flop:           573 out of   1,975   29%
-    Number with an unused LUT:                 580 out of   1,975   29%
-    Number of fully used LUT-FF pairs:         822 out of   1,975   41%
+  Number of occupied Slices:                   694 out of  59,760    1%
+  Number of LUT Flip Flop pairs used:        1,988
+    Number with an unused Flip Flop:           585 out of   1,988   29%
+    Number with an unused LUT:                 593 out of   1,988   29%
+    Number of fully used LUT-FF pairs:         810 out of   1,988   40%
     Number of unique control sets:             158
     Number of slice register sites lost
       to control set restrictions:             584 out of 478,080    1%
@@ -104,8 +104,8 @@ Specific Feature Utilization:
 Average Fanout of Non-Clock Nets:                2.56
 
 Peak Memory Usage:  5139 MB
-Total REAL time to MAP completion:  1 mins 19 secs 
-Total CPU time to MAP completion:   1 mins 19 secs 
+Total REAL time to MAP completion:  1 mins 23 secs 
+Total CPU time to MAP completion:   1 mins 21 secs 
 
 Table of Contents
 -----------------
