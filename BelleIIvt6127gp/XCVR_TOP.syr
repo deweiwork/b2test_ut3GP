@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.36 secs
+Total CPU time to Xst completion: 0.11 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.36 secs
+Total CPU time to Xst completion: 0.11 secs
  
 --> Reading design: XCVR_TOP.prj
 
@@ -159,7 +159,7 @@ Parsing architecture <XCVR_TOP_connect> of entity <xcvr_top>.
 Elaborating entity <XCVR_TOP> (architecture <XCVR_TOP_connect>) from library <work>.
 
 Elaborating entity <XCVR_8B10B_interconnect> (architecture <XCVR_8B10B_interconnect_Top>) from library <work>.
-WARNING:HDLCompiler:871 - "C:\Users\B1409_Server\Desktop\ut3GP\src\XCVR_8B10B_interconnect.vhd" Line 81: Using initial value ("00","00","00","00") for rx_err_detec_ch since it is never assigned
+WARNING:HDLCompiler:871 - "C:\Users\B1409_Server\Desktop\ut3GP\src\XCVR_8B10B_interconnect.vhd" Line 83: Using initial value ("00","00","00","00") for rx_err_detec_ch since it is never assigned
 
 Elaborating entity <v6_gtxwizard_v1_12> (architecture <RTL>) with generics from library <work>.
 WARNING:HDLCompiler:1127 - "C:\Users\B1409_Server\Desktop\ut3GP\ipcore_dir\v6_gtxwizard_v1_12.vhd" Line 489: Assignment to tied_to_vcc_i ignored, since the identifier is never used
@@ -176,8 +176,8 @@ Elaborating entity <frame_gen> (architecture <RTL>) from library <work>.
 Elaborating entity <frame_check> (architecture <RTL>) from library <work>.
 
 Elaborating entity <traffic> (architecture <top>) with generics from library <work>.
-INFO:HDLCompiler:679 - "C:\Users\B1409_Server\Desktop\ut3GP\src\traffic.vhd" Line 176. Case statement is complete. others clause is never selected
-INFO:HDLCompiler:679 - "C:\Users\B1409_Server\Desktop\ut3GP\src\traffic.vhd" Line 260. Case statement is complete. others clause is never selected
+INFO:HDLCompiler:679 - "C:\Users\B1409_Server\Desktop\ut3GP\src\traffic.vhd" Line 186. Case statement is complete. others clause is never selected
+INFO:HDLCompiler:679 - "C:\Users\B1409_Server\Desktop\ut3GP\src\traffic.vhd" Line 270. Case statement is complete. others clause is never selected
 
 Elaborating entity <reset_ctrl> (architecture <Behavioral>) with generics from library <work>.
 INFO:HDLCompiler:679 - "C:\Users\B1409_Server\Desktop\ut3GP\src\reset_ctrl.vhd" Line 167. Case statement is complete. others clause is never selected
@@ -202,41 +202,41 @@ WARNING:Xst:647 - Input <TX_para_external_ch<3>> is never used. This port will b
 WARNING:Xst:647 - Input <TX_para_external_ch<2>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <TX_para_external_ch<1>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <TX_para_external_ch<0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-INFO:Xst:3210 - "C:\Users\B1409_Server\Desktop\ut3GP\src\XCVR_8B10B_interconnect.vhd" line 511: Output port <GTX0_RXCHARISCOMMA_OUT> of the instance <v6_gtxwizard_v1_12_i> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\B1409_Server\Desktop\ut3GP\src\XCVR_8B10B_interconnect.vhd" line 511: Output port <GTX0_RXNOTINTABLE_OUT> of the instance <v6_gtxwizard_v1_12_i> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\B1409_Server\Desktop\ut3GP\src\XCVR_8B10B_interconnect.vhd" line 511: Output port <GTX0_RXRUNDISP_OUT> of the instance <v6_gtxwizard_v1_12_i> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\B1409_Server\Desktop\ut3GP\src\XCVR_8B10B_interconnect.vhd" line 511: Output port <GTX0_RXBUFSTATUS_OUT> of the instance <v6_gtxwizard_v1_12_i> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\B1409_Server\Desktop\ut3GP\src\XCVR_8B10B_interconnect.vhd" line 511: Output port <GTX0_RXLOSSOFSYNC_OUT> of the instance <v6_gtxwizard_v1_12_i> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\B1409_Server\Desktop\ut3GP\src\XCVR_8B10B_interconnect.vhd" line 511: Output port <GTX0_TXBUFSTATUS_OUT> of the instance <v6_gtxwizard_v1_12_i> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\B1409_Server\Desktop\ut3GP\src\XCVR_8B10B_interconnect.vhd" line 511: Output port <GTX1_RXCHARISCOMMA_OUT> of the instance <v6_gtxwizard_v1_12_i> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\B1409_Server\Desktop\ut3GP\src\XCVR_8B10B_interconnect.vhd" line 511: Output port <GTX1_RXNOTINTABLE_OUT> of the instance <v6_gtxwizard_v1_12_i> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\B1409_Server\Desktop\ut3GP\src\XCVR_8B10B_interconnect.vhd" line 511: Output port <GTX1_RXRUNDISP_OUT> of the instance <v6_gtxwizard_v1_12_i> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\B1409_Server\Desktop\ut3GP\src\XCVR_8B10B_interconnect.vhd" line 511: Output port <GTX1_RXCHBONDO_OUT> of the instance <v6_gtxwizard_v1_12_i> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\B1409_Server\Desktop\ut3GP\src\XCVR_8B10B_interconnect.vhd" line 511: Output port <GTX1_RXBUFSTATUS_OUT> of the instance <v6_gtxwizard_v1_12_i> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\B1409_Server\Desktop\ut3GP\src\XCVR_8B10B_interconnect.vhd" line 511: Output port <GTX1_RXLOSSOFSYNC_OUT> of the instance <v6_gtxwizard_v1_12_i> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\B1409_Server\Desktop\ut3GP\src\XCVR_8B10B_interconnect.vhd" line 511: Output port <GTX1_TXBUFSTATUS_OUT> of the instance <v6_gtxwizard_v1_12_i> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\B1409_Server\Desktop\ut3GP\src\XCVR_8B10B_interconnect.vhd" line 511: Output port <GTX2_RXCHARISCOMMA_OUT> of the instance <v6_gtxwizard_v1_12_i> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\B1409_Server\Desktop\ut3GP\src\XCVR_8B10B_interconnect.vhd" line 511: Output port <GTX2_RXNOTINTABLE_OUT> of the instance <v6_gtxwizard_v1_12_i> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\B1409_Server\Desktop\ut3GP\src\XCVR_8B10B_interconnect.vhd" line 511: Output port <GTX2_RXRUNDISP_OUT> of the instance <v6_gtxwizard_v1_12_i> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\B1409_Server\Desktop\ut3GP\src\XCVR_8B10B_interconnect.vhd" line 511: Output port <GTX2_RXCHBONDO_OUT> of the instance <v6_gtxwizard_v1_12_i> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\B1409_Server\Desktop\ut3GP\src\XCVR_8B10B_interconnect.vhd" line 511: Output port <GTX2_RXBUFSTATUS_OUT> of the instance <v6_gtxwizard_v1_12_i> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\B1409_Server\Desktop\ut3GP\src\XCVR_8B10B_interconnect.vhd" line 511: Output port <GTX2_RXLOSSOFSYNC_OUT> of the instance <v6_gtxwizard_v1_12_i> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\B1409_Server\Desktop\ut3GP\src\XCVR_8B10B_interconnect.vhd" line 511: Output port <GTX2_TXBUFSTATUS_OUT> of the instance <v6_gtxwizard_v1_12_i> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\B1409_Server\Desktop\ut3GP\src\XCVR_8B10B_interconnect.vhd" line 511: Output port <GTX3_RXCHARISCOMMA_OUT> of the instance <v6_gtxwizard_v1_12_i> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\B1409_Server\Desktop\ut3GP\src\XCVR_8B10B_interconnect.vhd" line 511: Output port <GTX3_RXNOTINTABLE_OUT> of the instance <v6_gtxwizard_v1_12_i> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\B1409_Server\Desktop\ut3GP\src\XCVR_8B10B_interconnect.vhd" line 511: Output port <GTX3_RXRUNDISP_OUT> of the instance <v6_gtxwizard_v1_12_i> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\B1409_Server\Desktop\ut3GP\src\XCVR_8B10B_interconnect.vhd" line 511: Output port <GTX3_RXCHBONDO_OUT> of the instance <v6_gtxwizard_v1_12_i> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\B1409_Server\Desktop\ut3GP\src\XCVR_8B10B_interconnect.vhd" line 511: Output port <GTX3_RXBUFSTATUS_OUT> of the instance <v6_gtxwizard_v1_12_i> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\B1409_Server\Desktop\ut3GP\src\XCVR_8B10B_interconnect.vhd" line 511: Output port <GTX3_RXLOSSOFSYNC_OUT> of the instance <v6_gtxwizard_v1_12_i> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\B1409_Server\Desktop\ut3GP\src\XCVR_8B10B_interconnect.vhd" line 511: Output port <GTX3_TXBUFSTATUS_OUT> of the instance <v6_gtxwizard_v1_12_i> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\B1409_Server\Desktop\ut3GP\src\XCVR_8B10B_interconnect.vhd" line 511: Output port <GTX0_RXCHANBONDSEQ_OUT> of the instance <v6_gtxwizard_v1_12_i> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\B1409_Server\Desktop\ut3GP\src\XCVR_8B10B_interconnect.vhd" line 511: Output port <GTX0_RXCHANREALIGN_OUT> of the instance <v6_gtxwizard_v1_12_i> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\B1409_Server\Desktop\ut3GP\src\XCVR_8B10B_interconnect.vhd" line 511: Output port <GTX1_RXCHANBONDSEQ_OUT> of the instance <v6_gtxwizard_v1_12_i> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\B1409_Server\Desktop\ut3GP\src\XCVR_8B10B_interconnect.vhd" line 511: Output port <GTX1_RXCHANREALIGN_OUT> of the instance <v6_gtxwizard_v1_12_i> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\B1409_Server\Desktop\ut3GP\src\XCVR_8B10B_interconnect.vhd" line 511: Output port <GTX2_RXCHANBONDSEQ_OUT> of the instance <v6_gtxwizard_v1_12_i> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\B1409_Server\Desktop\ut3GP\src\XCVR_8B10B_interconnect.vhd" line 511: Output port <GTX2_RXCHANREALIGN_OUT> of the instance <v6_gtxwizard_v1_12_i> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\B1409_Server\Desktop\ut3GP\src\XCVR_8B10B_interconnect.vhd" line 511: Output port <GTX3_RXCHANBONDSEQ_OUT> of the instance <v6_gtxwizard_v1_12_i> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\B1409_Server\Desktop\ut3GP\src\XCVR_8B10B_interconnect.vhd" line 511: Output port <GTX3_RXCHANREALIGN_OUT> of the instance <v6_gtxwizard_v1_12_i> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\B1409_Server\Desktop\ut3GP\src\XCVR_8B10B_interconnect.vhd" line 516: Output port <GTX0_RXCHARISCOMMA_OUT> of the instance <v6_gtxwizard_v1_12_i> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\B1409_Server\Desktop\ut3GP\src\XCVR_8B10B_interconnect.vhd" line 516: Output port <GTX0_RXNOTINTABLE_OUT> of the instance <v6_gtxwizard_v1_12_i> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\B1409_Server\Desktop\ut3GP\src\XCVR_8B10B_interconnect.vhd" line 516: Output port <GTX0_RXRUNDISP_OUT> of the instance <v6_gtxwizard_v1_12_i> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\B1409_Server\Desktop\ut3GP\src\XCVR_8B10B_interconnect.vhd" line 516: Output port <GTX0_RXBUFSTATUS_OUT> of the instance <v6_gtxwizard_v1_12_i> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\B1409_Server\Desktop\ut3GP\src\XCVR_8B10B_interconnect.vhd" line 516: Output port <GTX0_RXLOSSOFSYNC_OUT> of the instance <v6_gtxwizard_v1_12_i> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\B1409_Server\Desktop\ut3GP\src\XCVR_8B10B_interconnect.vhd" line 516: Output port <GTX0_TXBUFSTATUS_OUT> of the instance <v6_gtxwizard_v1_12_i> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\B1409_Server\Desktop\ut3GP\src\XCVR_8B10B_interconnect.vhd" line 516: Output port <GTX1_RXCHARISCOMMA_OUT> of the instance <v6_gtxwizard_v1_12_i> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\B1409_Server\Desktop\ut3GP\src\XCVR_8B10B_interconnect.vhd" line 516: Output port <GTX1_RXNOTINTABLE_OUT> of the instance <v6_gtxwizard_v1_12_i> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\B1409_Server\Desktop\ut3GP\src\XCVR_8B10B_interconnect.vhd" line 516: Output port <GTX1_RXRUNDISP_OUT> of the instance <v6_gtxwizard_v1_12_i> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\B1409_Server\Desktop\ut3GP\src\XCVR_8B10B_interconnect.vhd" line 516: Output port <GTX1_RXCHBONDO_OUT> of the instance <v6_gtxwizard_v1_12_i> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\B1409_Server\Desktop\ut3GP\src\XCVR_8B10B_interconnect.vhd" line 516: Output port <GTX1_RXBUFSTATUS_OUT> of the instance <v6_gtxwizard_v1_12_i> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\B1409_Server\Desktop\ut3GP\src\XCVR_8B10B_interconnect.vhd" line 516: Output port <GTX1_RXLOSSOFSYNC_OUT> of the instance <v6_gtxwizard_v1_12_i> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\B1409_Server\Desktop\ut3GP\src\XCVR_8B10B_interconnect.vhd" line 516: Output port <GTX1_TXBUFSTATUS_OUT> of the instance <v6_gtxwizard_v1_12_i> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\B1409_Server\Desktop\ut3GP\src\XCVR_8B10B_interconnect.vhd" line 516: Output port <GTX2_RXCHARISCOMMA_OUT> of the instance <v6_gtxwizard_v1_12_i> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\B1409_Server\Desktop\ut3GP\src\XCVR_8B10B_interconnect.vhd" line 516: Output port <GTX2_RXNOTINTABLE_OUT> of the instance <v6_gtxwizard_v1_12_i> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\B1409_Server\Desktop\ut3GP\src\XCVR_8B10B_interconnect.vhd" line 516: Output port <GTX2_RXRUNDISP_OUT> of the instance <v6_gtxwizard_v1_12_i> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\B1409_Server\Desktop\ut3GP\src\XCVR_8B10B_interconnect.vhd" line 516: Output port <GTX2_RXCHBONDO_OUT> of the instance <v6_gtxwizard_v1_12_i> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\B1409_Server\Desktop\ut3GP\src\XCVR_8B10B_interconnect.vhd" line 516: Output port <GTX2_RXBUFSTATUS_OUT> of the instance <v6_gtxwizard_v1_12_i> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\B1409_Server\Desktop\ut3GP\src\XCVR_8B10B_interconnect.vhd" line 516: Output port <GTX2_RXLOSSOFSYNC_OUT> of the instance <v6_gtxwizard_v1_12_i> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\B1409_Server\Desktop\ut3GP\src\XCVR_8B10B_interconnect.vhd" line 516: Output port <GTX2_TXBUFSTATUS_OUT> of the instance <v6_gtxwizard_v1_12_i> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\B1409_Server\Desktop\ut3GP\src\XCVR_8B10B_interconnect.vhd" line 516: Output port <GTX3_RXCHARISCOMMA_OUT> of the instance <v6_gtxwizard_v1_12_i> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\B1409_Server\Desktop\ut3GP\src\XCVR_8B10B_interconnect.vhd" line 516: Output port <GTX3_RXNOTINTABLE_OUT> of the instance <v6_gtxwizard_v1_12_i> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\B1409_Server\Desktop\ut3GP\src\XCVR_8B10B_interconnect.vhd" line 516: Output port <GTX3_RXRUNDISP_OUT> of the instance <v6_gtxwizard_v1_12_i> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\B1409_Server\Desktop\ut3GP\src\XCVR_8B10B_interconnect.vhd" line 516: Output port <GTX3_RXCHBONDO_OUT> of the instance <v6_gtxwizard_v1_12_i> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\B1409_Server\Desktop\ut3GP\src\XCVR_8B10B_interconnect.vhd" line 516: Output port <GTX3_RXBUFSTATUS_OUT> of the instance <v6_gtxwizard_v1_12_i> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\B1409_Server\Desktop\ut3GP\src\XCVR_8B10B_interconnect.vhd" line 516: Output port <GTX3_RXLOSSOFSYNC_OUT> of the instance <v6_gtxwizard_v1_12_i> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\B1409_Server\Desktop\ut3GP\src\XCVR_8B10B_interconnect.vhd" line 516: Output port <GTX3_TXBUFSTATUS_OUT> of the instance <v6_gtxwizard_v1_12_i> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\B1409_Server\Desktop\ut3GP\src\XCVR_8B10B_interconnect.vhd" line 516: Output port <GTX0_RXCHANBONDSEQ_OUT> of the instance <v6_gtxwizard_v1_12_i> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\B1409_Server\Desktop\ut3GP\src\XCVR_8B10B_interconnect.vhd" line 516: Output port <GTX0_RXCHANREALIGN_OUT> of the instance <v6_gtxwizard_v1_12_i> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\B1409_Server\Desktop\ut3GP\src\XCVR_8B10B_interconnect.vhd" line 516: Output port <GTX1_RXCHANBONDSEQ_OUT> of the instance <v6_gtxwizard_v1_12_i> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\B1409_Server\Desktop\ut3GP\src\XCVR_8B10B_interconnect.vhd" line 516: Output port <GTX1_RXCHANREALIGN_OUT> of the instance <v6_gtxwizard_v1_12_i> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\B1409_Server\Desktop\ut3GP\src\XCVR_8B10B_interconnect.vhd" line 516: Output port <GTX2_RXCHANBONDSEQ_OUT> of the instance <v6_gtxwizard_v1_12_i> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\B1409_Server\Desktop\ut3GP\src\XCVR_8B10B_interconnect.vhd" line 516: Output port <GTX2_RXCHANREALIGN_OUT> of the instance <v6_gtxwizard_v1_12_i> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\B1409_Server\Desktop\ut3GP\src\XCVR_8B10B_interconnect.vhd" line 516: Output port <GTX3_RXCHANBONDSEQ_OUT> of the instance <v6_gtxwizard_v1_12_i> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\B1409_Server\Desktop\ut3GP\src\XCVR_8B10B_interconnect.vhd" line 516: Output port <GTX3_RXCHANREALIGN_OUT> of the instance <v6_gtxwizard_v1_12_i> is unconnected or connected to loadless signal.
 WARNING:Xst:653 - Signal <RX_para_external_ch<3>> is used but never assigned. This sourceless signal will be automatically connected to value GND.
 WARNING:Xst:653 - Signal <RX_para_external_ch<2>> is used but never assigned. This sourceless signal will be automatically connected to value GND.
 WARNING:Xst:653 - Signal <RX_para_external_ch<1>> is used but never assigned. This sourceless signal will be automatically connected to value GND.
@@ -349,7 +349,7 @@ WARNING:Xst:647 - Input <rx_elastic_buf_done> is never used. This port will be p
     | Encoding           | auto                                           |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
-    Found 16-bit adder for signal <Tx_procedure.rx_wait_cnt[15]_GND_290_o_add_12_OUT> created at line 163.
+    Found 16-bit adder for signal <Tx_procedure.rx_wait_cnt[15]_GND_290_o_add_12_OUT> created at line 173.
     Summary:
 	inferred   1 Adder/Subtractor(s).
 	inferred 126 D-type flip-flop(s).
@@ -782,8 +782,8 @@ Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_CAPSTOR/I_C
 Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[0].u_ramb36/U_RAMB36/N0(Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[0].u_ramb36/U_RAMB36/XST_GND:G) | NONE(Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[0].u_ramb36/U_RAMB36/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[0].u_ramb36/U_RAMB36)| 72    |
 Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[1].u_ramb36/U_RAMB36/N0(Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[1].u_ramb36/U_RAMB36/XST_GND:G) | NONE(Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[1].u_ramb36/U_RAMB36/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[1].u_ramb36/U_RAMB36)| 72    |
 Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[2].u_ramb36/U_RAMB36/N0(Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[2].u_ramb36/U_RAMB36/XST_GND:G) | NONE(Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[2].u_ramb36/U_RAMB36/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[2].u_ramb36/U_RAMB36)| 72    |
-Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_STAT/U_ECR_glue_set(Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/XST_VCC:P)                                                                                                                                                                                                                                                                                        | NONE(Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[0].u_ramb36/U_RAMB36/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[0].u_ramb36/U_RAMB36)| 12    |
-Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_STAT/U_ECR_glue_set(Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/XST_VCC:P)                                                                                                                                                                                                                                                                                        | NONE(Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[2].u_ramb36/U_RAMB36/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[2].u_ramb36/U_RAMB36)| 12    |
+Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_STAT/U_ECR_glue_set(Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/XST_VCC:P)                                                                                                                                                                                                                                                                                        | NONE(Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_rx/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[2].u_ramb36/U_RAMB36/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[2].u_ramb36/U_RAMB36)| 12    |
+Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_STAT/U_ECR_glue_set(Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/XST_VCC:P)                                                                                                                                                                                                                                                                                        | NONE(Connect_XVCR_Module_loop[0].XCVR_Module_gen/ila_tx/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[1].u_ramb36/U_RAMB36/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[1].u_ramb36/U_RAMB36)| 12    |
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
 
 Timing Summary:
@@ -1178,11 +1178,11 @@ XCVR_Ref_Clock_in|    3.187|         |         |         |
 
 
 Total REAL time to Xst completion: 15.00 secs
-Total CPU time to Xst completion: 15.50 secs
+Total CPU time to Xst completion: 14.23 secs
  
 --> 
 
-Total memory usage is 4592160 kilobytes
+Total memory usage is 4591568 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :   47 (   0 filtered)

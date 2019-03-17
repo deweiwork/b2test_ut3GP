@@ -66,6 +66,8 @@ architecture XCVR_8B10B_interconnect_Top of XCVR_8B10B_interconnect is
 
     signal TX_traffic_ready_ch          : ser_data_men := (others =>'0');
     signal RX_traffic_ready_ch          : ser_data_men := (others =>'0');
+    signal TX_traffic_ready_buf_ch      : std_logic;
+    signal RX_traffic_ready_buf_ch      : std_logic;
 
     signal tx_traffic_ready_internal_ch : std_logic;
     signal rx_traffic_ready_internal_ch : std_logic;
@@ -497,12 +499,15 @@ begin
 
     TX_para_external_clk_ch <= tx_clk_buf_out when scr_para_Data_gen_check_form_this_module = '0';
     RX_para_external_clk_ch <= rx_clk_buf_out when scr_para_Data_gen_check_form_this_module = '0';
+    
+    RX_traffic_ready_buf_ch <= and_reduce(RX_traffic_ready_ch);
+    TX_traffic_ready_buf_ch <= and_reduce(TX_traffic_ready_ch);
     --ready-ext
-    rx_traffic_ready_ext_ch <= and_reduce(RX_traffic_ready_ch) when scr_para_Data_gen_check_form_this_module = '0';
-    tx_traffic_ready_ext_ch <= and_reduce(TX_traffic_ready_ch) when scr_para_Data_gen_check_form_this_module = '0';
+    rx_traffic_ready_ext_ch <= RX_traffic_ready_buf_ch when scr_para_Data_gen_check_form_this_module = '0';
+    tx_traffic_ready_ext_ch <= TX_traffic_ready_buf_ch when scr_para_Data_gen_check_form_this_module = '0';
     --ready-internal
-    rx_traffic_ready_internal_ch <= and_reduce(RX_traffic_ready_ch) when scr_para_Data_gen_check_form_this_module = '1';
-    tx_traffic_ready_internal_ch <= and_reduce(TX_traffic_ready_ch) when scr_para_Data_gen_check_form_this_module = '1';
+    rx_traffic_ready_internal_ch <= RX_traffic_ready_buf_ch when scr_para_Data_gen_check_form_this_module = '1';
+    tx_traffic_ready_internal_ch <= TX_traffic_ready_buf_ch when scr_para_Data_gen_check_form_this_module = '1';
     --for
     elastic_buf_en <= not(XCVR_TxRx_rst);
 

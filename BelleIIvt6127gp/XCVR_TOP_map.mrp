@@ -10,7 +10,7 @@ Target Device  : xc6vhx380t
 Target Package : ff1923
 Target Speed   : -2
 Mapper Version : virtex6 -- $Revision: 1.55 $
-Mapped Date    : Sun Mar 17 14:36:34 2019
+Mapped Date    : Sun Mar 17 15:45:46 2019
 
 Design Summary
 --------------
@@ -105,7 +105,7 @@ Average Fanout of Non-Clock Nets:                2.56
 
 Peak Memory Usage:  5139 MB
 Total REAL time to MAP completion:  1 mins 23 secs 
-Total CPU time to MAP completion:   1 mins 21 secs 
+Total CPU time to MAP completion:   1 mins 22 secs 
 
 Table of Contents
 -----------------

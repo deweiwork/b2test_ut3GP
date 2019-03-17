@@ -1,7 +1,7 @@
 Release 14.7 par P.20131013 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-DESKTOP-QRMVVUG::  Sun Mar 17 14:38:00 2019
+DESKTOP-QRMVVUG::  Sun Mar 17 15:47:12 2019
 
 par -w -intstyle ise -ol high -mt off XCVR_TOP_map.ncd XCVR_TOP.ncd
 XCVR_TOP.pcf 
@@ -280,7 +280,7 @@ All signals are completely routed.
 Total REAL time to PAR completion: 1 mins 
 Total CPU time to PAR completion: 1 mins 
 
-Peak Memory Usage:  5154 MB
+Peak Memory Usage:  5153 MB
 
 Placer: Placement generated during map.
 Routing: Completed - No errors found.

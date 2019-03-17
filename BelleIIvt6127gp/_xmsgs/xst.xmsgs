@@ -5,13 +5,13 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="HDLCompiler" num="685" delta="new" >"C:\Users\B1409_Server\Desktop\ut3GP\src\frame_gen.vhd" Line 9: Overwriting existing primary unit <arg fmt="%s" index="1">frame_gen</arg>
+<msg type="warning" file="HDLCompiler" num="685" delta="old" >"C:\Users\B1409_Server\Desktop\ut3GP\src\frame_gen.vhd" Line 9: Overwriting existing primary unit <arg fmt="%s" index="1">frame_gen</arg>
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="685" delta="new" >"C:\Users\B1409_Server\Desktop\ut3GP\src\frame_check.vhd" Line 9: Overwriting existing primary unit <arg fmt="%s" index="1">frame_check</arg>
+<msg type="warning" file="HDLCompiler" num="685" delta="old" >"C:\Users\B1409_Server\Desktop\ut3GP\src\frame_check.vhd" Line 9: Overwriting existing primary unit <arg fmt="%s" index="1">frame_check</arg>
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="871" delta="new" >"C:\Users\B1409_Server\Desktop\ut3GP\src\XCVR_8B10B_interconnect.vhd" Line 81: Using initial value <arg fmt="%s" index="1">(&quot;00&quot;,&quot;00&quot;,&quot;00&quot;,&quot;00&quot;)</arg> for <arg fmt="%s" index="2">rx_err_detec_ch</arg> since it is never assigned
+<msg type="warning" file="HDLCompiler" num="871" delta="new" >"C:\Users\B1409_Server\Desktop\ut3GP\src\XCVR_8B10B_interconnect.vhd" Line 83: Using initial value <arg fmt="%s" index="1">(&quot;00&quot;,&quot;00&quot;,&quot;00&quot;,&quot;00&quot;)</arg> for <arg fmt="%s" index="2">rx_err_detec_ch</arg> since it is never assigned
 </msg>
 
 <msg type="warning" file="HDLCompiler" num="1127" delta="new" >"C:\Users\B1409_Server\Desktop\ut3GP\ipcore_dir\v6_gtxwizard_v1_12.vhd" Line 489: Assignment to <arg fmt="%s" index="1">tied_to_vcc_i</arg> ignored, since the identifier is never used
@@ -44,109 +44,109 @@
 <msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">TX_para_external_ch&lt;0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\B1409_Server\Desktop\ut3GP\src\XCVR_8B10B_interconnect.vhd</arg>&quot; line <arg fmt="%s" index="2">511</arg>: Output port &lt;<arg fmt="%s" index="3">GTX0_RXCHARISCOMMA_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">v6_gtxwizard_v1_12_i</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\B1409_Server\Desktop\ut3GP\src\XCVR_8B10B_interconnect.vhd</arg>&quot; line <arg fmt="%s" index="2">516</arg>: Output port &lt;<arg fmt="%s" index="3">GTX0_RXCHARISCOMMA_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">v6_gtxwizard_v1_12_i</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\B1409_Server\Desktop\ut3GP\src\XCVR_8B10B_interconnect.vhd</arg>&quot; line <arg fmt="%s" index="2">511</arg>: Output port &lt;<arg fmt="%s" index="3">GTX0_RXNOTINTABLE_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">v6_gtxwizard_v1_12_i</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\B1409_Server\Desktop\ut3GP\src\XCVR_8B10B_interconnect.vhd</arg>&quot; line <arg fmt="%s" index="2">516</arg>: Output port &lt;<arg fmt="%s" index="3">GTX0_RXNOTINTABLE_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">v6_gtxwizard_v1_12_i</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\B1409_Server\Desktop\ut3GP\src\XCVR_8B10B_interconnect.vhd</arg>&quot; line <arg fmt="%s" index="2">511</arg>: Output port &lt;<arg fmt="%s" index="3">GTX0_RXRUNDISP_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">v6_gtxwizard_v1_12_i</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\B1409_Server\Desktop\ut3GP\src\XCVR_8B10B_interconnect.vhd</arg>&quot; line <arg fmt="%s" index="2">516</arg>: Output port &lt;<arg fmt="%s" index="3">GTX0_RXRUNDISP_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">v6_gtxwizard_v1_12_i</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\B1409_Server\Desktop\ut3GP\src\XCVR_8B10B_interconnect.vhd</arg>&quot; line <arg fmt="%s" index="2">511</arg>: Output port &lt;<arg fmt="%s" index="3">GTX0_RXBUFSTATUS_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">v6_gtxwizard_v1_12_i</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\B1409_Server\Desktop\ut3GP\src\XCVR_8B10B_interconnect.vhd</arg>&quot; line <arg fmt="%s" index="2">516</arg>: Output port &lt;<arg fmt="%s" index="3">GTX0_RXBUFSTATUS_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">v6_gtxwizard_v1_12_i</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\B1409_Server\Desktop\ut3GP\src\XCVR_8B10B_interconnect.vhd</arg>&quot; line <arg fmt="%s" index="2">511</arg>: Output port &lt;<arg fmt="%s" index="3">GTX0_RXLOSSOFSYNC_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">v6_gtxwizard_v1_12_i</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\B1409_Server\Desktop\ut3GP\src\XCVR_8B10B_interconnect.vhd</arg>&quot; line <arg fmt="%s" index="2">516</arg>: Output port &lt;<arg fmt="%s" index="3">GTX0_RXLOSSOFSYNC_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">v6_gtxwizard_v1_12_i</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\B1409_Server\Desktop\ut3GP\src\XCVR_8B10B_interconnect.vhd</arg>&quot; line <arg fmt="%s" index="2">511</arg>: Output port &lt;<arg fmt="%s" index="3">GTX0_TXBUFSTATUS_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">v6_gtxwizard_v1_12_i</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\B1409_Server\Desktop\ut3GP\src\XCVR_8B10B_interconnect.vhd</arg>&quot; line <arg fmt="%s" index="2">516</arg>: Output port &lt;<arg fmt="%s" index="3">GTX0_TXBUFSTATUS_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">v6_gtxwizard_v1_12_i</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\B1409_Server\Desktop\ut3GP\src\XCVR_8B10B_interconnect.vhd</arg>&quot; line <arg fmt="%s" index="2">511</arg>: Output port &lt;<arg fmt="%s" index="3">GTX1_RXCHARISCOMMA_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">v6_gtxwizard_v1_12_i</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\B1409_Server\Desktop\ut3GP\src\XCVR_8B10B_interconnect.vhd</arg>&quot; line <arg fmt="%s" index="2">516</arg>: Output port &lt;<arg fmt="%s" index="3">GTX1_RXCHARISCOMMA_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">v6_gtxwizard_v1_12_i</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\B1409_Server\Desktop\ut3GP\src\XCVR_8B10B_interconnect.vhd</arg>&quot; line <arg fmt="%s" index="2">511</arg>: Output port &lt;<arg fmt="%s" index="3">GTX1_RXNOTINTABLE_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">v6_gtxwizard_v1_12_i</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\B1409_Server\Desktop\ut3GP\src\XCVR_8B10B_interconnect.vhd</arg>&quot; line <arg fmt="%s" index="2">516</arg>: Output port &lt;<arg fmt="%s" index="3">GTX1_RXNOTINTABLE_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">v6_gtxwizard_v1_12_i</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\B1409_Server\Desktop\ut3GP\src\XCVR_8B10B_interconnect.vhd</arg>&quot; line <arg fmt="%s" index="2">511</arg>: Output port &lt;<arg fmt="%s" index="3">GTX1_RXRUNDISP_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">v6_gtxwizard_v1_12_i</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\B1409_Server\Desktop\ut3GP\src\XCVR_8B10B_interconnect.vhd</arg>&quot; line <arg fmt="%s" index="2">516</arg>: Output port &lt;<arg fmt="%s" index="3">GTX1_RXRUNDISP_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">v6_gtxwizard_v1_12_i</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\B1409_Server\Desktop\ut3GP\src\XCVR_8B10B_interconnect.vhd</arg>&quot; line <arg fmt="%s" index="2">511</arg>: Output port &lt;<arg fmt="%s" index="3">GTX1_RXCHBONDO_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">v6_gtxwizard_v1_12_i</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\B1409_Server\Desktop\ut3GP\src\XCVR_8B10B_interconnect.vhd</arg>&quot; line <arg fmt="%s" index="2">516</arg>: Output port &lt;<arg fmt="%s" index="3">GTX1_RXCHBONDO_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">v6_gtxwizard_v1_12_i</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\B1409_Server\Desktop\ut3GP\src\XCVR_8B10B_interconnect.vhd</arg>&quot; line <arg fmt="%s" index="2">511</arg>: Output port &lt;<arg fmt="%s" index="3">GTX1_RXBUFSTATUS_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">v6_gtxwizard_v1_12_i</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\B1409_Server\Desktop\ut3GP\src\XCVR_8B10B_interconnect.vhd</arg>&quot; line <arg fmt="%s" index="2">516</arg>: Output port &lt;<arg fmt="%s" index="3">GTX1_RXBUFSTATUS_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">v6_gtxwizard_v1_12_i</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\B1409_Server\Desktop\ut3GP\src\XCVR_8B10B_interconnect.vhd</arg>&quot; line <arg fmt="%s" index="2">511</arg>: Output port &lt;<arg fmt="%s" index="3">GTX1_RXLOSSOFSYNC_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">v6_gtxwizard_v1_12_i</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\B1409_Server\Desktop\ut3GP\src\XCVR_8B10B_interconnect.vhd</arg>&quot; line <arg fmt="%s" index="2">516</arg>: Output port &lt;<arg fmt="%s" index="3">GTX1_RXLOSSOFSYNC_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">v6_gtxwizard_v1_12_i</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\B1409_Server\Desktop\ut3GP\src\XCVR_8B10B_interconnect.vhd</arg>&quot; line <arg fmt="%s" index="2">511</arg>: Output port &lt;<arg fmt="%s" index="3">GTX1_TXBUFSTATUS_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">v6_gtxwizard_v1_12_i</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\B1409_Server\Desktop\ut3GP\src\XCVR_8B10B_interconnect.vhd</arg>&quot; line <arg fmt="%s" index="2">516</arg>: Output port &lt;<arg fmt="%s" index="3">GTX1_TXBUFSTATUS_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">v6_gtxwizard_v1_12_i</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\B1409_Server\Desktop\ut3GP\src\XCVR_8B10B_interconnect.vhd</arg>&quot; line <arg fmt="%s" index="2">511</arg>: Output port &lt;<arg fmt="%s" index="3">GTX2_RXCHARISCOMMA_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">v6_gtxwizard_v1_12_i</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\B1409_Server\Desktop\ut3GP\src\XCVR_8B10B_interconnect.vhd</arg>&quot; line <arg fmt="%s" index="2">516</arg>: Output port &lt;<arg fmt="%s" index="3">GTX2_RXCHARISCOMMA_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">v6_gtxwizard_v1_12_i</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\B1409_Server\Desktop\ut3GP\src\XCVR_8B10B_interconnect.vhd</arg>&quot; line <arg fmt="%s" index="2">511</arg>: Output port &lt;<arg fmt="%s" index="3">GTX2_RXNOTINTABLE_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">v6_gtxwizard_v1_12_i</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\B1409_Server\Desktop\ut3GP\src\XCVR_8B10B_interconnect.vhd</arg>&quot; line <arg fmt="%s" index="2">516</arg>: Output port &lt;<arg fmt="%s" index="3">GTX2_RXNOTINTABLE_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">v6_gtxwizard_v1_12_i</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\B1409_Server\Desktop\ut3GP\src\XCVR_8B10B_interconnect.vhd</arg>&quot; line <arg fmt="%s" index="2">511</arg>: Output port &lt;<arg fmt="%s" index="3">GTX2_RXRUNDISP_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">v6_gtxwizard_v1_12_i</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\B1409_Server\Desktop\ut3GP\src\XCVR_8B10B_interconnect.vhd</arg>&quot; line <arg fmt="%s" index="2">516</arg>: Output port &lt;<arg fmt="%s" index="3">GTX2_RXRUNDISP_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">v6_gtxwizard_v1_12_i</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\B1409_Server\Desktop\ut3GP\src\XCVR_8B10B_interconnect.vhd</arg>&quot; line <arg fmt="%s" index="2">511</arg>: Output port &lt;<arg fmt="%s" index="3">GTX2_RXCHBONDO_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">v6_gtxwizard_v1_12_i</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\B1409_Server\Desktop\ut3GP\src\XCVR_8B10B_interconnect.vhd</arg>&quot; line <arg fmt="%s" index="2">516</arg>: Output port &lt;<arg fmt="%s" index="3">GTX2_RXCHBONDO_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">v6_gtxwizard_v1_12_i</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\B1409_Server\Desktop\ut3GP\src\XCVR_8B10B_interconnect.vhd</arg>&quot; line <arg fmt="%s" index="2">511</arg>: Output port &lt;<arg fmt="%s" index="3">GTX2_RXBUFSTATUS_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">v6_gtxwizard_v1_12_i</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\B1409_Server\Desktop\ut3GP\src\XCVR_8B10B_interconnect.vhd</arg>&quot; line <arg fmt="%s" index="2">516</arg>: Output port &lt;<arg fmt="%s" index="3">GTX2_RXBUFSTATUS_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">v6_gtxwizard_v1_12_i</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\B1409_Server\Desktop\ut3GP\src\XCVR_8B10B_interconnect.vhd</arg>&quot; line <arg fmt="%s" index="2">511</arg>: Output port &lt;<arg fmt="%s" index="3">GTX2_RXLOSSOFSYNC_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">v6_gtxwizard_v1_12_i</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\B1409_Server\Desktop\ut3GP\src\XCVR_8B10B_interconnect.vhd</arg>&quot; line <arg fmt="%s" index="2">516</arg>: Output port &lt;<arg fmt="%s" index="3">GTX2_RXLOSSOFSYNC_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">v6_gtxwizard_v1_12_i</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\B1409_Server\Desktop\ut3GP\src\XCVR_8B10B_interconnect.vhd</arg>&quot; line <arg fmt="%s" index="2">511</arg>: Output port &lt;<arg fmt="%s" index="3">GTX2_TXBUFSTATUS_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">v6_gtxwizard_v1_12_i</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\B1409_Server\Desktop\ut3GP\src\XCVR_8B10B_interconnect.vhd</arg>&quot; line <arg fmt="%s" index="2">516</arg>: Output port &lt;<arg fmt="%s" index="3">GTX2_TXBUFSTATUS_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">v6_gtxwizard_v1_12_i</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\B1409_Server\Desktop\ut3GP\src\XCVR_8B10B_interconnect.vhd</arg>&quot; line <arg fmt="%s" index="2">511</arg>: Output port &lt;<arg fmt="%s" index="3">GTX3_RXCHARISCOMMA_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">v6_gtxwizard_v1_12_i</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\B1409_Server\Desktop\ut3GP\src\XCVR_8B10B_interconnect.vhd</arg>&quot; line <arg fmt="%s" index="2">516</arg>: Output port &lt;<arg fmt="%s" index="3">GTX3_RXCHARISCOMMA_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">v6_gtxwizard_v1_12_i</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\B1409_Server\Desktop\ut3GP\src\XCVR_8B10B_interconnect.vhd</arg>&quot; line <arg fmt="%s" index="2">511</arg>: Output port &lt;<arg fmt="%s" index="3">GTX3_RXNOTINTABLE_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">v6_gtxwizard_v1_12_i</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\B1409_Server\Desktop\ut3GP\src\XCVR_8B10B_interconnect.vhd</arg>&quot; line <arg fmt="%s" index="2">516</arg>: Output port &lt;<arg fmt="%s" index="3">GTX3_RXNOTINTABLE_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">v6_gtxwizard_v1_12_i</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\B1409_Server\Desktop\ut3GP\src\XCVR_8B10B_interconnect.vhd</arg>&quot; line <arg fmt="%s" index="2">511</arg>: Output port &lt;<arg fmt="%s" index="3">GTX3_RXRUNDISP_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">v6_gtxwizard_v1_12_i</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\B1409_Server\Desktop\ut3GP\src\XCVR_8B10B_interconnect.vhd</arg>&quot; line <arg fmt="%s" index="2">516</arg>: Output port &lt;<arg fmt="%s" index="3">GTX3_RXRUNDISP_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">v6_gtxwizard_v1_12_i</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\B1409_Server\Desktop\ut3GP\src\XCVR_8B10B_interconnect.vhd</arg>&quot; line <arg fmt="%s" index="2">511</arg>: Output port &lt;<arg fmt="%s" index="3">GTX3_RXCHBONDO_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">v6_gtxwizard_v1_12_i</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\B1409_Server\Desktop\ut3GP\src\XCVR_8B10B_interconnect.vhd</arg>&quot; line <arg fmt="%s" index="2">516</arg>: Output port &lt;<arg fmt="%s" index="3">GTX3_RXCHBONDO_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">v6_gtxwizard_v1_12_i</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\B1409_Server\Desktop\ut3GP\src\XCVR_8B10B_interconnect.vhd</arg>&quot; line <arg fmt="%s" index="2">511</arg>: Output port &lt;<arg fmt="%s" index="3">GTX3_RXBUFSTATUS_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">v6_gtxwizard_v1_12_i</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\B1409_Server\Desktop\ut3GP\src\XCVR_8B10B_interconnect.vhd</arg>&quot; line <arg fmt="%s" index="2">516</arg>: Output port &lt;<arg fmt="%s" index="3">GTX3_RXBUFSTATUS_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">v6_gtxwizard_v1_12_i</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\B1409_Server\Desktop\ut3GP\src\XCVR_8B10B_interconnect.vhd</arg>&quot; line <arg fmt="%s" index="2">511</arg>: Output port &lt;<arg fmt="%s" index="3">GTX3_RXLOSSOFSYNC_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">v6_gtxwizard_v1_12_i</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\B1409_Server\Desktop\ut3GP\src\XCVR_8B10B_interconnect.vhd</arg>&quot; line <arg fmt="%s" index="2">516</arg>: Output port &lt;<arg fmt="%s" index="3">GTX3_RXLOSSOFSYNC_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">v6_gtxwizard_v1_12_i</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\B1409_Server\Desktop\ut3GP\src\XCVR_8B10B_interconnect.vhd</arg>&quot; line <arg fmt="%s" index="2">511</arg>: Output port &lt;<arg fmt="%s" index="3">GTX3_TXBUFSTATUS_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">v6_gtxwizard_v1_12_i</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\B1409_Server\Desktop\ut3GP\src\XCVR_8B10B_interconnect.vhd</arg>&quot; line <arg fmt="%s" index="2">516</arg>: Output port &lt;<arg fmt="%s" index="3">GTX3_TXBUFSTATUS_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">v6_gtxwizard_v1_12_i</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\B1409_Server\Desktop\ut3GP\src\XCVR_8B10B_interconnect.vhd</arg>&quot; line <arg fmt="%s" index="2">511</arg>: Output port &lt;<arg fmt="%s" index="3">GTX0_RXCHANBONDSEQ_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">v6_gtxwizard_v1_12_i</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\B1409_Server\Desktop\ut3GP\src\XCVR_8B10B_interconnect.vhd</arg>&quot; line <arg fmt="%s" index="2">516</arg>: Output port &lt;<arg fmt="%s" index="3">GTX0_RXCHANBONDSEQ_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">v6_gtxwizard_v1_12_i</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\B1409_Server\Desktop\ut3GP\src\XCVR_8B10B_interconnect.vhd</arg>&quot; line <arg fmt="%s" index="2">511</arg>: Output port &lt;<arg fmt="%s" index="3">GTX0_RXCHANREALIGN_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">v6_gtxwizard_v1_12_i</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\B1409_Server\Desktop\ut3GP\src\XCVR_8B10B_interconnect.vhd</arg>&quot; line <arg fmt="%s" index="2">516</arg>: Output port &lt;<arg fmt="%s" index="3">GTX0_RXCHANREALIGN_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">v6_gtxwizard_v1_12_i</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\B1409_Server\Desktop\ut3GP\src\XCVR_8B10B_interconnect.vhd</arg>&quot; line <arg fmt="%s" index="2">511</arg>: Output port &lt;<arg fmt="%s" index="3">GTX1_RXCHANBONDSEQ_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">v6_gtxwizard_v1_12_i</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\B1409_Server\Desktop\ut3GP\src\XCVR_8B10B_interconnect.vhd</arg>&quot; line <arg fmt="%s" index="2">516</arg>: Output port &lt;<arg fmt="%s" index="3">GTX1_RXCHANBONDSEQ_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">v6_gtxwizard_v1_12_i</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\B1409_Server\Desktop\ut3GP\src\XCVR_8B10B_interconnect.vhd</arg>&quot; line <arg fmt="%s" index="2">511</arg>: Output port &lt;<arg fmt="%s" index="3">GTX1_RXCHANREALIGN_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">v6_gtxwizard_v1_12_i</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\B1409_Server\Desktop\ut3GP\src\XCVR_8B10B_interconnect.vhd</arg>&quot; line <arg fmt="%s" index="2">516</arg>: Output port &lt;<arg fmt="%s" index="3">GTX1_RXCHANREALIGN_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">v6_gtxwizard_v1_12_i</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\B1409_Server\Desktop\ut3GP\src\XCVR_8B10B_interconnect.vhd</arg>&quot; line <arg fmt="%s" index="2">511</arg>: Output port &lt;<arg fmt="%s" index="3">GTX2_RXCHANBONDSEQ_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">v6_gtxwizard_v1_12_i</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\B1409_Server\Desktop\ut3GP\src\XCVR_8B10B_interconnect.vhd</arg>&quot; line <arg fmt="%s" index="2">516</arg>: Output port &lt;<arg fmt="%s" index="3">GTX2_RXCHANBONDSEQ_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">v6_gtxwizard_v1_12_i</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\B1409_Server\Desktop\ut3GP\src\XCVR_8B10B_interconnect.vhd</arg>&quot; line <arg fmt="%s" index="2">511</arg>: Output port &lt;<arg fmt="%s" index="3">GTX2_RXCHANREALIGN_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">v6_gtxwizard_v1_12_i</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\B1409_Server\Desktop\ut3GP\src\XCVR_8B10B_interconnect.vhd</arg>&quot; line <arg fmt="%s" index="2">516</arg>: Output port &lt;<arg fmt="%s" index="3">GTX2_RXCHANREALIGN_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">v6_gtxwizard_v1_12_i</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\B1409_Server\Desktop\ut3GP\src\XCVR_8B10B_interconnect.vhd</arg>&quot; line <arg fmt="%s" index="2">511</arg>: Output port &lt;<arg fmt="%s" index="3">GTX3_RXCHANBONDSEQ_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">v6_gtxwizard_v1_12_i</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\B1409_Server\Desktop\ut3GP\src\XCVR_8B10B_interconnect.vhd</arg>&quot; line <arg fmt="%s" index="2">516</arg>: Output port &lt;<arg fmt="%s" index="3">GTX3_RXCHANBONDSEQ_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">v6_gtxwizard_v1_12_i</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\B1409_Server\Desktop\ut3GP\src\XCVR_8B10B_interconnect.vhd</arg>&quot; line <arg fmt="%s" index="2">511</arg>: Output port &lt;<arg fmt="%s" index="3">GTX3_RXCHANREALIGN_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">v6_gtxwizard_v1_12_i</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\B1409_Server\Desktop\ut3GP\src\XCVR_8B10B_interconnect.vhd</arg>&quot; line <arg fmt="%s" index="2">516</arg>: Output port &lt;<arg fmt="%s" index="3">GTX3_RXCHANREALIGN_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">v6_gtxwizard_v1_12_i</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
 <msg type="warning" file="Xst" num="653" delta="new" >Signal &lt;<arg fmt="%s" index="1">RX_para_external_ch&lt;3&gt;</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
