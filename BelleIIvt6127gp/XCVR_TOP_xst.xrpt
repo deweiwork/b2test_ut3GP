@@ -5,36 +5,32 @@
     The structure and the elements are likely to change over the next few releases.
     This means code written to parse this file will need to be revisited each subsequent release.-->
 
-  <application stringID="Xst" timeStamp="Sun Mar 17 15:45:20 2019">
+  <application stringID="Xst" timeStamp="Mon Apr 22 00:21:30 2019">
     <section stringID="User_Env">
       <table stringID="User_EnvVar">
         <column stringID="variable"/>
         <column stringID="value"/>
         <row stringID="row" value="0">
           <item stringID="variable" value="Path"/>
-          <item stringID="value" value="C:\Xilinx\14.7\ISE_DS\ISE\\lib\nt64;C:\Xilinx\14.7\ISE_DS\ISE\\bin\nt64;C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64;C:\Xilinx\14.7\ISE_DS\ISE\lib\nt64;C:\Xilinx\14.7\ISE_DS\ISE\..\..\..\DocNav;C:\Xilinx\14.7\ISE_DS\PlanAhead\bin;C:\Xilinx\14.7\ISE_DS\EDK\bin\nt64;C:\Xilinx\14.7\ISE_DS\EDK\lib\nt64;C:\Xilinx\14.7\ISE_DS\EDK\gnu\microblaze\nt\bin;C:\Xilinx\14.7\ISE_DS\EDK\gnu\powerpc-eabi\nt\bin;C:\Xilinx\14.7\ISE_DS\EDK\gnuwin\bin;C:\Xilinx\14.7\ISE_DS\EDK\gnu\arm\nt\bin;C:\Xilinx\14.7\ISE_DS\EDK\gnu\microblaze\linux_toolchain\nt64_be\bin;C:\Xilinx\14.7\ISE_DS\EDK\gnu\microblaze\linux_toolchain\nt64_le\bin;C:\Xilinx\14.7\ISE_DS\common\bin\nt64;C:\Xilinx\14.7\ISE_DS\common\lib\nt64;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\mingw-w64\x86_64-8.1.0-posix-seh-rt_v6-rev0\mingw64\bin;C:\Program Files\Git\cmd;C:\Program Files\PuTTY\;C:\Users\B1409_Server\AppData\Local\Microsoft\WindowsApps;C:\Users\B1409_Server\AppData\Local\Programs\Microsoft VS Code\bin;C:\intelFPGA\18.1\modelsim_ase\win32aloem"/>
+          <item stringID="value" value="C:\Xilinx\14.7\ISE_DS\ISE\\lib\nt64;C:\Xilinx\14.7\ISE_DS\ISE\\bin\nt64;C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64;C:\Xilinx\14.7\ISE_DS\ISE\lib\nt64;C:\Xilinx\14.7\ISE_DS\ISE\..\..\..\DocNav;C:\Xilinx\14.7\ISE_DS\PlanAhead\bin;C:\Xilinx\14.7\ISE_DS\EDK\bin\nt64;C:\Xilinx\14.7\ISE_DS\EDK\lib\nt64;C:\Xilinx\14.7\ISE_DS\EDK\gnu\microblaze\nt\bin;C:\Xilinx\14.7\ISE_DS\EDK\gnu\powerpc-eabi\nt\bin;C:\Xilinx\14.7\ISE_DS\EDK\gnuwin\bin;C:\Xilinx\14.7\ISE_DS\EDK\gnu\arm\nt\bin;C:\Xilinx\14.7\ISE_DS\EDK\gnu\microblaze\linux_toolchain\nt64_be\bin;C:\Xilinx\14.7\ISE_DS\EDK\gnu\microblaze\linux_toolchain\nt64_le\bin;C:\Xilinx\14.7\ISE_DS\common\bin\nt64;C:\Xilinx\14.7\ISE_DS\common\lib\nt64;C:\Python27\;C:\Program Files\Python37\Scripts\;C:\Program Files\Python37\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\CMake\bin;C:\Program Files\mingw-w64\x86_64-8.1.0-posix-seh-rt_v6-rev0\mingw64\bin;C:\opecv\4_0_1\build\bin;C:\opecv\4_0_1\build\x64\vc15\bin;C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\VC\Tools\MSVC\14.16.27023\bin\HostX64\x64;C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\MSBuild\Current\Bin;C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\VC\Tools\MSVC\14.20.27508\bin\Hostx64\x64;C:\ProgramData\chocolatey\bin;C:\Program Files (x86)\Windows Kits\8.1\Windows Performance Toolkit\;C:\Program Files\nodejs\;C:\Users\curlywei\AppData\Local\Microsoft\WindowsApps;C:\Users\curlywei\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\curlywei\AppData\Roaming\npm"/>
         </row>
         <row stringID="row" value="1">
           <item stringID="variable" value="PATHEXT"/>
-          <item stringID="value" value=".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC"/>
+          <item stringID="value" value=".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW"/>
         </row>
         <row stringID="row" value="2">
           <item stringID="variable" value="XILINX"/>
           <item stringID="value" value="C:\Xilinx\14.7\ISE_DS\ISE\"/>
         </row>
         <row stringID="row" value="3">
-          <item stringID="variable" value="XILINXD_LICENSE_FILE"/>
-          <item stringID="value" value="C:\Users\B1409_Server\Desktop\FPGAlicenseFile\Xilinx.lic"/>
-        </row>
-        <row stringID="row" value="4">
           <item stringID="variable" value="XILINX_DSP"/>
           <item stringID="value" value="C:\Xilinx\14.7\ISE_DS\ISE"/>
         </row>
-        <row stringID="row" value="5">
+        <row stringID="row" value="4">
           <item stringID="variable" value="XILINX_EDK"/>
           <item stringID="value" value="C:\Xilinx\14.7\ISE_DS\EDK"/>
         </row>
-        <row stringID="row" value="6">
+        <row stringID="row" value="5">
           <item stringID="variable" value="XILINX_PLANAHEAD"/>
           <item stringID="value" value="C:\Xilinx\14.7\ISE_DS\PlanAhead"/>
         </row>
@@ -43,13 +39,13 @@
         <item stringID="User_EnvOsname" value="Microsoft , 64-bit"/>
         <item stringID="User_EnvOsrelease" value="major release  (build 9200)"/>
       </item>
-      <item stringID="User_EnvHost" value="DESKTOP-QRMVVUG"/>
+      <item stringID="User_EnvHost" value="curlywei-PC"/>
       <table stringID="User_EnvCpu">
         <column stringID="arch"/>
         <column stringID="speed"/>
         <row stringID="row" value="0">
-          <item stringID="arch" value="Intel(R) Core(TM) i7-3770 CPU @ 3.40GHz"/>
-          <item stringID="speed" value="3392 MHz"/>
+          <item stringID="arch" value="AMD Ryzen 7 2700X Eight-Core Processor         "/>
+          <item stringID="speed" value="4088 MHz"/>
         </row>
       </table>
     </section>
@@ -116,17 +112,15 @@
         <item dataType="int" stringID="XST_8BIT_ADDER" value="2"/>
       </item>
       <item dataType="int" stringID="XST_REGISTERS" value="93">
-        <item dataType="int" stringID="XST_1BIT_REGISTER" value="39"/>
+        <item dataType="int" stringID="XST_1BIT_REGISTER" value="41"/>
         <item dataType="int" stringID="XST_16BIT_REGISTER" value="38"/>
         <item dataType="int" stringID="XST_2BIT_REGISTER" value="12"/>
-        <item dataType="int" stringID="XST_4BIT_REGISTER" value="2"/>
         <item dataType="int" stringID="XST_8BIT_REGISTER" value="2"/>
       </item>
       <item dataType="int" stringID="XST_MULTIPLEXERS" value="39">
-        <item dataType="int" stringID="XST_1BIT_2TO1_MULTIPLEXER" value="1"/>
+        <item dataType="int" stringID="XST_1BIT_2TO1_MULTIPLEXER" value="2"/>
         <item dataType="int" stringID="XST_16BIT_2TO1_MULTIPLEXER" value="31"/>
         <item dataType="int" stringID="XST_2BIT_2TO1_MULTIPLEXER" value="4"/>
-        <item dataType="int" stringID="XST_4BIT_2TO1_MULTIPLEXER" value="1"/>
         <item dataType="int" stringID="XST_8BIT_2TO1_MULTIPLEXER" value="2"/>
       </item>
       <item dataType="int" stringID="XST_FSMS" value="9"/>
@@ -136,14 +130,13 @@
         <item dataType="int" stringID="XST_16BIT_ADDER" value="5"/>
       </item>
       <item dataType="int" stringID="XST_COUNTERS" value="11"></item>
-      <item dataType="int" stringID="XST_REGISTERS" value="535">
-        <item dataType="int" stringID="XST_FLIPFLOPS" value="535"/>
+      <item dataType="int" stringID="XST_REGISTERS" value="529">
+        <item dataType="int" stringID="XST_FLIPFLOPS" value="529"/>
       </item>
       <item dataType="int" stringID="XST_MULTIPLEXERS" value="32">
-        <item dataType="int" stringID="XST_1BIT_2TO1_MULTIPLEXER" value="1"/>
+        <item dataType="int" stringID="XST_1BIT_2TO1_MULTIPLEXER" value="2"/>
         <item dataType="int" stringID="XST_16BIT_2TO1_MULTIPLEXER" value="26"/>
         <item dataType="int" stringID="XST_2BIT_2TO1_MULTIPLEXER" value="4"/>
-        <item dataType="int" stringID="XST_4BIT_2TO1_MULTIPLEXER" value="1"/>
       </item>
       <item dataType="int" stringID="XST_FSMS" value="9"/>
     </section>
@@ -181,10 +174,10 @@
         </item>
         <item dataType="int" stringID="XST_FLIPFLOPSLATCHES" value="1948">
           <item dataType="int" stringID="XST_FD" value="397"/>
-          <item dataType="int" stringID="XST_FDC" value="251"/>
+          <item dataType="int" stringID="XST_FDC" value="250"/>
           <item dataType="int" stringID="XST_FDCE" value="254"/>
           <item dataType="int" stringID="XST_FDE" value="356"/>
-          <item dataType="int" stringID="XST_FDP" value="398"/>
+          <item dataType="int" stringID="XST_FDP" value="399"/>
           <item dataType="int" stringID="XST_FDR" value="93"/>
           <item dataType="int" stringID="XST_FDRE" value="157"/>
           <item dataType="int" stringID="XST_FDS" value="40"/>
@@ -230,7 +223,7 @@
     <section stringID="XST_ERRORS_STATISTICS">
       <item dataType="int" filtered="0" stringID="XST_NUMBER_OF_ERRORS" value="0"/>
       <item dataType="int" filtered="0" stringID="XST_NUMBER_OF_WARNINGS" value="47"/>
-      <item dataType="int" filtered="0" stringID="XST_NUMBER_OF_INFOS" value="45"/>
+      <item dataType="int" filtered="0" stringID="XST_NUMBER_OF_INFOS" value="43"/>
     </section>
   </application>
 

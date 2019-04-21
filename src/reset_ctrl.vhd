@@ -19,7 +19,7 @@ Port (
     INIT_CLK                 : in  std_logic;
 
     
-    XCVR_rst_out             : out ser_data_men;
+    XCVR_rst_out             : out std_logic;
     align_en                 : out std_logic; 
     lane_up                  : out std_logic;
     
@@ -56,7 +56,7 @@ architecture Behavioral of reset_ctrl is
     signal rst_ip_done               : std_logic;
 
     signal lane_up_r                 : std_logic := '0';
-    signal XCVR_rst_out_r            : ser_data_men := (others => '0');
+    signal XCVR_rst_out_r            : std_logic;
     signal align_en_r                : std_logic;
 
 begin
@@ -82,7 +82,7 @@ begin
             lane_up_status <= power_on ;
 
             lane_up                  <= '0';
-            XCVR_rst_out             <= (others => '0');
+            XCVR_rst_out             <= '1';
             align_en                 <= '0';
 
             power_on_cnt    := 0;
@@ -107,13 +107,13 @@ begin
                         if (power_on_cnt = power_on_wait_clks) then
                             power_on_cnt     := 0;
                             lane_up_status   <= wait_locked;
-                            XCVR_rst_out_r   <= (others=> '0');
+                            XCVR_rst_out_r   <= '0';
                             align_en_r <= '1';
                         else
                             power_on_cnt     := power_on_cnt + 1;
                             lane_up_status   <= power_on;
 
-                            XCVR_rst_out_r   <= (others=> '1');
+                            XCVR_rst_out_r   <= '1';
                             lane_up_r        <= '0';
                             align_en_r       <= '0';
                         end if;
@@ -158,11 +158,11 @@ begin
                         --if all_locked = '1' then
                             lane_up_r <= '1';
                             lane_up_status          <= now_xcvr_init_done ;
-                            XCVR_rst_out_r <= (others => '0');
+                            XCVR_rst_out_r <= '0';
                         else
                             lane_up_r <= '0';
                             lane_up_status          <= power_on ;
-                            XCVR_rst_out_r <= (others=> '1');
+                            XCVR_rst_out_r <= '1';
                         end if;
                     when others =>
 
