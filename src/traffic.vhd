@@ -111,7 +111,8 @@ begin
 
             rx_wait_cnt    := 0;
 
-            tx_traffic_ready <= '0';
+            tx_traffic_ready    <= '0';
+            tx_traffic_ready_r  <= '0';
         else
             if (rising_edge(Tx_Clk)) then
                 Tx_DATA_client_r <= Tx_DATA_client ;
@@ -198,7 +199,8 @@ begin
 
             Rx_DATA_client   <= (others => '0');
 
-            rx_traffic_ready <= '0';
+            rx_traffic_ready    <= '0';
+            rx_traffic_ready_r  <= '0';
 
         else
             if (rising_edge(Rx_Clk)) then
